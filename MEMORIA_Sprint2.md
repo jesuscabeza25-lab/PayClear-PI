@@ -311,14 +311,14 @@ Atendiendo al modelo de arquitectura *Local-First* de la herramienta:
 
 En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española de Protección de Datos (AEPD), PayClear integra la privacidad desde la fase conceptual del software:
 
--   **Privacidad por defecto (*****Privacy by Default*****):** La configuración inicial e inalterable de la aplicación impide la recolección o envío en segundo plano de telemetría, datos de analítica de uso o rastreadores de comportamiento. La aplicación funciona al $100\\%$ sin conexión a Internet (*offline*).
--   **Control de accesos y seguridad en sesión (*****Privacy by Design*****):**
--   -   **Bloqueo seguro de Bóveda:** Implementación de la función de cierre instantáneo de sesión (botón "Bloquear Bóveda" o atajo `Ctrl + L`), la cual destruye las instancias activas de las pantallas en memoria RAM mediante el método `dispose()` de Java Swing y redirige a la pantalla de bloqueo (P1). Esto evita que terceros puedan cotillear la información en ordenadores compartidos.
+-   **Privacidad por defecto (Privacy by Default):** La configuración inicial e inalterable de la aplicación impide la recolección o envío en segundo plano de telemetría, datos de analítica de uso o rastreadores de comportamiento. La aplicación funciona al $100\\%$ sin conexión a Internet.
+-   **Control de accesos y seguridad en sesión (Privacy by Design):**
+-   -   **Bloqueo seguro de Bóveda:** Implementación de la función de cierre instantáneo de sesión (botón "Bloquear Bóveda" o atajo Ctrl + L), la cual destruye las instancias activas de las pantallas en memoria RAM mediante el método dispose() de Java Swing y redirige a la pantalla de bloqueo (P1). Esto evita que terceros puedan cotillear la información en ordenadores compartidos.
     -   **Almacenamiento seguro de credenciales con Hashing:** La contraseña o PIN de acceso a la bóveda local nunca se almacena en texto plano. Se procesa mediante el algoritmo de cifrado irreversible **SHA-256** (con *salt* local). Al intentar acceder, la aplicación genera el resumen cifrado del PIN introducido y lo compara con el *hash* guardado en el archivo local, garantizando que la clave no sea leída aun si se abre directamente el archivo JSON.
 -   **Política de retención y eliminación de datos ("Derecho al olvido" inmediato):**
 -   -   Al no existir servidores remotos, el usuario mantiene el control absoluto y directo sobre la persistencia de sus datos.
-    -   Si el usuario elimina un gasto o un grupo de la aplicación, el sistema ejecuta la supresión física e irreversible de dichos nodos en el fichero `.json` local.
-    -   Si el usuario desinstala el programa o elimina el fichero `.json` de su disco duro, la destrucción de la información es inmediata y definitiva, cumpliendo al $100\\%$ el derecho de supresión (Art. 17 del RGPD) sin requerir solicitudes a terceros.
+    -   Si el usuario elimina un gasto o un grupo de la aplicación, el sistema ejecuta la supresión física e irreversible de dichos nodos en el fichero .json local.
+    -   Si el usuario desinstala el programa o elimina el fichero .json de su disco duro, la destrucción de la información es inmediata y definitiva, cumpliendo al $100\\%$ el derecho de supresión (Art. 17 del RGPD) sin requerir solicitudes a terceros.
 
 #### Fuentes utilizadas
 
