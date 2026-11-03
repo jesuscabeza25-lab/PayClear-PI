@@ -101,6 +101,7 @@ https://www.larazon.es/economia/parejas-pisos-compartidos-error-financiero-que-m
 [Focus Market / Fintech Naranja X. (https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)](https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874) 
 
 Resto de fuentes se basa en la encuesta realizada en el sprint1 y experiencias personales que nos ha llevado a pensar en esta aplicación como solución.
+
 ---
 
 ## 2.3. Estudio de soluciones existentes
@@ -179,6 +180,7 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 | **Proveedores Tecnológicos (GitHub, Flutter, Oracle...)** | Externo | Secundario | Respeto a las licencias de software libre y uso de sus APIs y librerías. | **Bajo**<br>*(Monitorizar)* | Control de licencias en la documentación técnica y seguimiento de *releases* oficiales en repositorios. |
 | **Competidores(Splitwise, Tricount, Settle Up)** | Externo | Secundario | Mantener su mercado y rentabilizar sus modelos de suscripción. | **Bajo**<br>*(Monitorizar)* | Análisis de *benchmarking* periódico para vigilar cambios en sus métodos de monetización y mantener la ventaja competitiva de PayClear. |
 
+---
 
 ## 2.5. Estudio de viabilidad técnica
 
