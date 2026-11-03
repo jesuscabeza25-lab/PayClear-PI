@@ -49,7 +49,57 @@ Javier tiene 38 años y trabaja gestionando una residencia de estudiantes o un e
 -   **¿Cómo responde PayClear en la pantalla?:**
     -   Al no guardar datos en internet ni en la nube (todo se guarda dentro del móvil u ordenador de los propios usuarios), la empresa de Javier no gasta dinero en servidores ni se expone a problemas con las leyes de protección de datos.
     -   Permite personalizar la aplicación con la marca o logo del edificio si la empresa quiere ofrecerla como un servicio extra a sus inquilinos.
+    -   
+ ## 2.2 Análisis de la necesidad
 
+ ### 2.2.1 En que consiste
+
+ - Durante nuestra investigacion hemos llegado a la conclusion de que la problematica principal se encuentra en las personas jovenes que comparten piso y las que necesiten una division de cuentas rapida para determinadas operaciones y asi puedan mejorar su estado financiero poco a poco. 
+
+La carencia a resolver la he encontrado en diversos artículos pero este lo resume muy bien:  https://www.linkedin.com/pulse/d%C3%A9ficit-de-educaci%C3%B3n-financiera-en-los-j%C3%B3venes-un-con-villalobo-w8b5f/
+El resto estará en la bibliografía de la memoria
+
+### 2.2.2 Diagnóstico de la situación de partida (As-Is). 
+
+En estos momento la gestion de gastos compartidos entre personas se suele realizar en programas poco adaptados a el publico general y manualmente en hojas fisicas:
+
+1. **Cálculo manual sobre soporte físico:**  
+   Recopilación física de tiques de caja y anotaciones en pizarras comunes o blocs de notas. La division de estas cuentas se suele realizar en calculadoras de telefonos moviles y luego se anota en fisico o digital , algo que consume tiempo y esfuerzo innecesario.
+2. **Hojas de cálculo:**  
+   Personas con mas conocimiento informatico dedica tiempo a crear su propio sistema de deudas en excel, algo funcional pero poco accesible para el dia a dia, una aplicacion dedicada solucionaria tener que crear tu propio sistema de division de cuentas.
+ 3. **Aplicaciones dedicadas:**  
+   Pese a que no seamos los inventores del concepto, si venimos a mejorarlo, y es que aplicaciones como spliwise necesitan de un log previo, contiene anuncios y micropagos, y las funciones que queremos implementar seran accesibles en la pantalla principal, a diferencia de los competidores que tienes que moverte por varios menus.
+
+   ### 2.2.3 Problemas y consecuencias identificadas. 
+
+  - Nos hemos encontrado que las personas encontraban ineficiente el uso de la calculadora al momento de realizar esa clase de divisiones de cuenta ya que consumia tiempo, comeduras de cabeza y la gran cantidad de veces alguien salia pagando mas que los demas. Profundizando un poco hemos encontrado articulos que respaldan la necesidad de una aplicacion que gestione esas deudas y cuentas pendientes y es que en las escuelas no hay la educacion financiera minima que deberian de tener los jovenes no solo para su futuro si no para la gestion de su dinero el dia a dia.
+
+   ### 2.2.4 Propuesta de valor y situación deseada (To-Be) 
+
+  - Nuestra aplicacion pretende solucionar los problemas de las personas anteriormente mencionadas creando una aplicacion cuyo unico objetivo sea ajustar cuentas de forma eficiente y tener un balance de cuanto te deben y depes para saber si en el censo acabaras ganando o perdiendo, sin tener en cuenta tus cuentas de banco.
+  ### 2.2.5 Flujo actual VS Flujo propuesto
+
+<img width="532" height="550" alt="Image" src="https://github.com/user-attachments/assets/6b1dae5c-3b35-4493-beec-ee18fb89ad53" />
+
+   ### 2.2.6 Necesidades funcionales y operativas de alto nivel
+
+Para solucionar los fallos detectados en el modelo actual y lograr el flujo propuesto, el desarrollo de la aplicación se fundamenta en los siguientes requerimientos clave:
+
+- **Funcionamiento 100% Local (Local-First):** La herramienta debe ser capaz de ejecutar todas sus funciones sin conexión a internet ni necesidad de registro previo, garantizando la privacidad absoluta de las cuentas del piso y eliminando tiempos de espera por servidores.
+- **Registro de gastos en un solo paso:** La opción de añadir un nuevo gasto o tique tiene que estar accesible directamente desde la pantalla principal para evitar navegación innecesaria por menús.
+- **Cálculo instantáneo de saldos:** El sistema debe calcular y mostrar de forma clara quién está en estado de "Acreedor" (le deben dinero) y quién de "Deudor" (debe dinero), aplicando etiquetas legibles para cualquier usuario.
+- **Optimización del reparto de deudas:** Implementación de una lógica interna que reduzca las transacciones del grupo al mínimo número de pagos posibles entre compañeros.
+- **Almacenamiento persistente en equipo:** Guardado automático de los datos de cada grupo en archivos locales para conservar la información intacta al cerrar el programa.
+
+
+Fuentes: 
+- La Razón (Sección Económica)
+https://www.larazon.es/economia/parejas-pisos-compartidos-error-financiero-que-mas-conflictos-esta-generando-este-ano-3v3rfin_2026031369b3d47fd489bf782e18a535.html
+
+- Focus Market (ambito)
+[Focus Market / Fintech Naranja X. (https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)](https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874) 
+
+Resto de fuentes se basa en la encuesta realizada en el sprint1 y experiencias personales que nos ha llevado a pensar en esta aplicación como solución.
 
 
 # 2.4. Partes interesadas
