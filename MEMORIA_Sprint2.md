@@ -101,6 +101,69 @@ https://www.larazon.es/economia/parejas-pisos-compartidos-error-financiero-que-m
 
 Resto de fuentes se basa en la encuesta realizada en el sprint1 y experiencias personales que nos ha llevado a pensar en esta aplicación como solución.
 
+## 2.3. Estudio de soluciones existentes
+
+###  2.3.1. ¿En qué consiste?
+Para saber si de verdad nuestra app vale la pena, hemos hecho un análisis comparativo de mercado (*benchmarking*). El objetivo ha sido probar las aplicaciones reales que usa la gente hoy en día para dividir gastos y ver qué fallos o limitaciones tienen. Así podemos justificar por qué **PayClear** aporta un valor diferencial y resuelve mejor el problema en un entorno de piso compartido.
+
+---
+
+### 2.3.2. Lo que hemos analizado y comparado
+
+### 2.3.2.1. Identificación de software competidor
+Hemos seleccionado 3 alternativas reales del mercado que la gente suele utilizar para esto:
+
+- **Splitwise:** Es la aplicación más famosa y usada del mundo para dividir gastos en grupo.
+- **Tricount:** Otra alternativa muy conocida, enfocada sobre todo en viajes de grupo y cuentas sencillas.
+- **Splid:** Una app móvil pensada para repartir gastos de forma rápida y con opción de funcionar sin internet.
+
+---
+
+###  2.3.2.2. Análisis comparativo de los competidores
+
+- **Splitwise:**
+  - *Lo bueno:* La conoce todo el mundo y calcula bien las deudas.
+  - *Lo malo:* Su versión gratuita actual limita a meter como máximo 3 o 4 gastos al día, mete anuncios molestos y te obliga a pagar una suscripción mensual para quitar los límites. Además, te exige crearte una cuenta con correo obligatoriamente y depender de sus servidores.
+- **Tricount:**
+  - *Lo bueno:* No tiene el límite de gastos diarios de Splitwise y es bastante fácil de usar.
+  - *Lo malo:* Te pide registro para gestionar varios grupos y su interfaz se centra más en viajes temporales que en la gestión diaria de un piso. Tampoco tiene una app de escritorio nativa orientada al ordenador.
+- **Splid:**
+  - *Lo bueno:* Deja usarla sin registro previo para empezar y tiene modo sin conexión.
+  - *Lo malo:* Está pensada solo para móviles (iOS/Android). Si estás en el ordenador estudiando o trabajando y quieres meter los tiques del piso, no tienes una versión de escritorio cómoda. Además, la versión gratis limita el número de grupos que puedes crear.
+
+---
+
+  ### 2.3.2.3. Matriz comparativa de soluciones de mercado
+
+| Parámetro / Característica | Splitwise | Tricount | Splid | PayClear (Nuestra propuesta) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Coste / Modelo de negocio** | Gratis con recortes / Suscripción Pro | Gratis con anuncios / Pagos integrados | Gratis limitado / Pago único Plus | **100% Gratuito y sin micropagos** |
+| **Límite de registros diarios** |  Máximo 3-4 gastos al día (gratis) | Img / Sin límite | Img / Sin límite | **Sin ningún límite de entradas** |
+| **Uso sin registro (Sin cuenta)** |  Obligatorio crear cuenta y correo |  Parcial | Img / Permite uso sin cuenta | **100% Sin registro ni correo** |
+| **Privacidad y almacenamiento** | Servidores en la nube (Requiere internet) | Servidores en la nube (Requiere internet) | Almacenamiento local / nube parcial | **100% Local-First (JSON en tu equipo)** |
+| **Entorno de uso prioritario** | Móvil / Web | Móvil / Web | Exclusivo Móvil (iOS/Android) | **Escritorio nativo (Windows, Mac, Linux)** |
+| **Curva de aprendizaje** | Media (Menús anidados y ajustes) | Fácil (Centrado en viajes) | Muy fácil | **Inmediata (Acciones a 1 clic)** |
+
+
+###  2.3.2.4. Justificación de la propuesta (Ventaja competitiva)
+
+Al analizar las alternativas del mercado nos dimos cuenta de que las apps actuales están pensadas casi siempre para móviles y enfocadas a sacarte el dinero con suscripciones o anuncios insoportables justo cuando vas a meter la compra del piso. 
+
+La gran ventaja competitiva de **PayClear** es que es una herramienta de escritorio **100% local, gratuita y privada**: no necesitas crearte cuenta de usuario, tus datos no se suben a ningún servidor de internet, no hay límites de tiques diarios y puedes gestionar las cuentas de tu piso en un segundo desde tu propio ordenador mientras estudias o trabajas, sin rodeos ni menús complicados.
+
+---
+
+Fuentes:
+
+- Split Circle (Límites de Splitwise)
+https://split-circle.com/en/blog/splitwise-daily-limit
+
+- Público (Comparativa Splitwise, Splid y Tricount)
+https://www.publico.es/ahorro-inteligente/splitwise-splid-tricount-mejores-apps-compartir-gastos.html
+
+- La Razón (Apps para compartir gastos)
+https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-compartir-gastos-cuentas_20210224699470161817b41eb64e05b2.html
+
 
 # 2.4. Partes interesadas
 
