@@ -288,3 +288,41 @@ Dado que PayClear es un proyecto académico sin fines de lucro, nos enfocaremos 
 * **Metodo ROI: BBVA** 
   Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
 
+## 2.7. Estudio de viabilidad legal y normativa
+### 2.7.1. Protección de datos personales
+
+El desarrollo y la arquitectura de PayClear se han diseñado garantizando el estricto cumplimiento del marco normativo europeo y español en materia de privacidad, concretamente el **Reglamento General de Protección de Datos (RGPD, Reglamento UE 2016/679)** y la **Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)**.
+
+#### 1\. Identificación de los datos de carácter personal recabados
+
+A diferencia de las alternativas comerciales (Splitwise, Tricount) que requieren registros obligatorios y vinculación de perfiles, PayClear aplica de forma estricta el **principio de minimización de datos** (Art. 5.1.c del RGPD):
+
+-   **Datos NO recabados:** La aplicación no solicita, procesa ni almacena ningún dato identificativo real de nivel personal o sensible, tales como correo electrónico, número de teléfono, nombre completo, dirección IP, geolocalización GPS, ni datos financieros o bancarios (números de tarjeta o IBAN).
+-   **Datos locales recabados:** Únicamente se gestionan los alias o apodos informales de los participantes del piso (ej. *"Carlos"*, *"Sofía"*) y los conceptos e importes de los gastos introducidos manualmente. Estos datos residen **exclusivamente en el dispositivo local del usuario** dentro de ficheros `.json` y nunca se transmiten a servidores externos ni a terceros.
+
+#### 2\. Definición de la base de legitimación
+
+Atendiendo al modelo de arquitectura *Local-First* de la herramienta:
+
+-   **Exención por ámbito estrictamente personal o doméstico (Art. 2.2.c del RGPD):** El cálculo y división de gastos de un piso compartido constituye una actividad exclusivamente personal o doméstica. Al no existir transferencia ni centralización de datos hacia servidores de la empresa, la responsabilidad sobre el almacenamiento de la información recae en el propio equipo del usuario.
+-   **Base de legitimación por ejecución del servicio (Art. 6.1.b del RGPD):** En el ámbito funcional interno de la interfaz, el procesamiento local de los alias e importes se legitima en la ejecución explícita de las acciones solicitadas por el usuario al interactuar con el sistema (crear un grupo, configurar la bóveda o registrar un tique) y la aceptación implícita de las condiciones al abrir la aplicación.
+
+#### 3\. Medidas de diseño orientadas a la privacidad (*Privacy by Design* y *Privacy by Default*)
+
+En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española de Protección de Datos (AEPD), PayClear integra la privacidad desde la fase conceptual del software:
+
+-   **Privacidad por defecto (*****Privacy by Default*****):** La configuración inicial e inalterable de la aplicación impide la recolección o envío en segundo plano de telemetría, datos de analítica de uso o rastreadores de comportamiento. La aplicación funciona al $100\\%$ sin conexión a Internet (*offline*).
+-   **Control de accesos y seguridad en sesión (*****Privacy by Design*****):**
+-   -   **Bloqueo seguro de Bóveda:** Implementación de la función de cierre instantáneo de sesión (botón "Bloquear Bóveda" o atajo `Ctrl + L`), la cual destruye las instancias activas de las pantallas en memoria RAM mediante el método `dispose()` de Java Swing y redirige a la pantalla de bloqueo (P1). Esto evita que terceros puedan cotillear la información en ordenadores compartidos.
+    -   **Almacenamiento seguro de credenciales con Hashing:** La contraseña o PIN de acceso a la bóveda local nunca se almacena en texto plano. Se procesa mediante el algoritmo de cifrado irreversible **SHA-256** (con *salt* local). Al intentar acceder, la aplicación genera el resumen cifrado del PIN introducido y lo compara con el *hash* guardado en el archivo local, garantizando que la clave no sea leída aun si se abre directamente el archivo JSON.
+-   **Política de retención y eliminación de datos ("Derecho al olvido" inmediato):**
+-   -   Al no existir servidores remotos, el usuario mantiene el control absoluto y directo sobre la persistencia de sus datos.
+    -   Si el usuario elimina un gasto o un grupo de la aplicación, el sistema ejecuta la supresión física e irreversible de dichos nodos en el fichero `.json` local.
+    -   Si el usuario desinstala el programa o elimina el fichero `.json` de su disco duro, la destrucción de la información es inmediata y definitiva, cumpliendo al $100\\%$ el derecho de supresión (Art. 17 del RGPD) sin requerir solicitudes a terceros.
+
+#### Fuentes utilizadas
+
+-   **Boletín Oficial del Estado (BOE).** Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).[https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)
+-   **Agencia Española de Protección de Datos (AEPD).** Reglamento General de Protección de Datos (RGPD) y Guías de Privacidad desde el Diseño y por Defecto.[https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos/rgpd](https://www.google.com/search?q=https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos/rgpd&authuser=3)
+-   **Agencia Española de Protección de Datos (AEPD).** Preguntas Frecuentes: ¿Qué es la protección de datos desde el diseño y por defecto?[https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto](https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto)
+
