@@ -49,7 +49,8 @@ Javier tiene 38 años y trabaja gestionando una residencia de estudiantes o un e
 -   **¿Cómo responde PayClear en la pantalla?:**
     -   Al no guardar datos en internet ni en la nube (todo se guarda dentro del móvil u ordenador de los propios usuarios), la empresa de Javier no gasta dinero en servidores ni se expone a problemas con las leyes de protección de datos.
     -   Permite personalizar la aplicación con la marca o logo del edificio si la empresa quiere ofrecerla como un servicio extra a sus inquilinos.
-    -   
+
+--- 
  ## 2.2 Análisis de la necesidad
 
  ### 2.2.1 En que consiste
@@ -100,6 +101,7 @@ https://www.larazon.es/economia/parejas-pisos-compartidos-error-financiero-que-m
 [Focus Market / Fintech Naranja X. (https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)](https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874) 
 
 Resto de fuentes se basa en la encuesta realizada en el sprint1 y experiencias personales que nos ha llevado a pensar en esta aplicación como solución.
+---
 
 ## 2.3. Estudio de soluciones existentes
 
@@ -164,6 +166,7 @@ https://www.publico.es/ahorro-inteligente/splitwise-splid-tricount-mejores-apps-
 - La Razón (Apps para compartir gastos)
 https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-compartir-gastos-cuentas_20210224699470161817b41eb64e05b2.html
 
+---
 
 # 2.4. Partes interesadas
 
@@ -233,6 +236,8 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 **Gson:** https://dam.org.es/gson/ , https://ironpdf.com/es/java/blog/java-help/gson-java/
 
 **JUnit5:** https://es.parasoft.com/glossary/junit/ , https://www.arquitecturajava.com/junit-5-novedades-y-buenas-practicas/
+
+---
 
 ## 2.6. Estudio de viabilidad económica
 
