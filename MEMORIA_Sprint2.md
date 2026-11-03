@@ -233,3 +233,51 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 **Gson:** https://dam.org.es/gson/ , https://ironpdf.com/es/java/blog/java-help/gson-java/
 
 **JUnit5:** https://es.parasoft.com/glossary/junit/ , https://www.arquitecturajava.com/junit-5-novedades-y-buenas-practicas/
+
+## 2.6. Estudio de viabilidad económica
+
+### 2.6.1. ¿En qué consiste?
+
+Este apartado evalúa los costes y recursos financieros necesarios para desarrollar, implantar y mantener la aplicación PayClear. El objetivo es verificar que el proyecto es económicamente sostenible a lo largo de su ciclo de vida. El objetivo es poder verificar que el proyecto sea económicamente sostenible durante el ciclo de vida de esta aplicación. Ya que es una aplicación "Local-First" se reducen los costes drásticamente al no depender de servidores en la nube de pago recurrente.
+
+### 2.6.2. Estimación de costes de desarrollo (Personal)
+
+* **Horas estimadas:** 120 horas totales (aprox. 40 horas por alumno).
+* **Tarifa horaria simulada:** 10 €/hora (perfil desarrollador júnior).
+* **Coste total de personal:** 120 horas × 10 €/h = 1.200,00 €.
+
+### 2.6.3. Costes de infraestructura, licencias e indirectos
+
+* **Infraestructura (Hardware):** **0 €**. Se han utilizado los ordenadores portátiles personales de los alumnos, por lo que no ha sido necesaria ninguna inversión en equipos.
+
+* **Licencias de Software:** **0 €**. Todo el desarrollo se ha realizado con herramientas de código abierto (Java Swing, FlatLaf, Apache NetBeans) y licencias educativas gratuitas (Figma Education, GitHub Free).
+
+* **Costes indirectos y mantenimiento:** Se asignan **40 €** para cubrir los gastos de electricidad y de internet durante el trabajo en casa. Al funcionar sin internet, el coste de mantenimiento de servidores cuando se lance el producto será inexistente.
+
+### 2.6.4. Presupuesto desglosado
+
+| Partida Presupuestaria | Concepto | Coste Estimado (€) |
+| :--- | :--- | :--- |
+| **Personal** | 3 alumnos simulando tarifa Júnior (120h a 10 €/h) | 1.200,00 € |
+| **Hardware** | Equipos personales de los alumnos | 0,00 € |
+| **Software / Servicios** | Licencias educativas y código abierto | 0,00 € |
+| **Gastos Indirectos** | Uso de electricidad e internet personal de cada uno | 40,00 € x 3 = 120,00€ |
+| **Subtotal** | Costes directos e indirectos | **1.200,00 €** |
+| **Imprevistos** | Margen para imprevistos (simulado) | 120,00 € |
+| **TOTAL PRESUPUESTO** | Coste total de la simulación del proyecto | **1.320,00 €** |
+
+### 2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes
+
+Dado que PayClear es un proyecto académico sin fines de lucro, nos enfocaremos en el valor que aportaremos  y el ahorro final (ROI: indicador financiero que mide la rentabilidad de un proyecto comparando el beneficio que se obtiene con el coste que ha supuesto desarrollarlo.) : 
+* **Ahorro económico:** Evita al usuario pagar suscripciones (como los aprox. 30-40 € anuales de alternativas comerciales como Splitwise Pro) para tener funciones ilimitadas.
+* **Mantenimiento sostenible:** Al guardar toda la información localmente en formato JSON en el equipo del usuario, el proyecto no va a necesitar inversión continua en servidores y servicios en la nube. Una vez entregado el código, la aplicación funciona de forma autónoma y gratuita a largo plazo. 
+
+**Fuentes de referencia (Bibliografía directa):**
+
+* **Precio hora programador: cuánto cobra un desarrollador** (Justificacion de la tarifa de 10 €/hora para un júnior).
+  Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
+* **Splitwise Pro: precio, qué incluye y si vale la pena** (Justificacion el coste real de la suscripción anual de hasta 47,99 € en España).
+  Enlace: https://www.spliteo.app/blog/es/precio-de-splitwise-pro/
+* **Metodo ROI: BBVA** 
+  Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
+
