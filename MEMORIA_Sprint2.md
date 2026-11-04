@@ -241,53 +241,58 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 
 ---
 
-## 2.6. Estudio de viabilidad económica
+### 2.6. Estudio de viabilidad económica
 
 ### 2.6.1. ¿En qué consiste?
-
-Este apartado evalúa los costes y recursos financieros necesarios para desarrollar, implantar y mantener la aplicación PayClear. El objetivo es verificar que el proyecto es económicamente sostenible a lo largo de su ciclo de vida. El objetivo es poder verificar que el proyecto sea económicamente sostenible durante el ciclo de vida de esta aplicación. Ya que es una aplicación "Local-First" se reducen los costes drásticamente al no depender de servidores en la nube de pago recurrente.
+En este apartado miramos cuánto nos costaría desarrollar, lanzar y mantener PayClear si fuera un trabajo profesional. Queremos comprobar si la aplicación se puede sostener en el tiempo sin ocasionar grandes perdidas. Como es un programa que guarda todo en local (*Local-First*), los gastos bajan muchísimo porque no tenemos que pagar servidores ni bases de datos en la nube todos los meses.
 
 ### 2.6.2. Estimación de costes de desarrollo (Personal)
-
-* **Horas estimadas:** 120 horas totales (aprox. 40 horas por alumno).
-* **Tarifa horaria simulada:** 10 €/hora (perfil desarrollador júnior).
-* **Coste total de personal:** 120 horas × 10 €/h = 1.200,00 €.
+Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos mirado el horario de las asignaturas donde desarrollamos la app (Desarrollo de Interfaces y Proyecto Intermodular) durante los dos primeros trimestres:
+- **Carga de horas a la semana:** Tenemos 5 horas semanales de DII y 3 de PI, así que cada uno le dedica 8 horas a la semana.
+- **Horas reales por trimestre:**
+  - *Primer Trimestre (del 16/09 al 27/11):* Nos salen unas 70 horas por alumno, ya quitando los festivos y el tiempo que el profesor explica teoría en clase.
+  - *Segundo Trimestre (del 30/11 al 25/02):* Calculamos otras 70 horas por alumno, quitando las vacaciones de Navidad y las clases de nueva teoría.
+- **Total de horas trabajadas:** 420 horas entre los tres (140 horas cada uno juntando los dos trimestres).
+- **Precio por hora:** Ponemos 10 €/hora, que es lo habitual para un desarrollador júnior que acaba de empezar.
+- **Coste de personal:** 420 horas × 10 €/h = 4.200,00 €.
 
 ### 2.6.3. Costes de infraestructura, licencias e indirectos
-
-* **Infraestructura (Hardware):** **0 €**. Se han utilizado los ordenadores portátiles personales de los alumnos, por lo que no ha sido necesaria ninguna inversión en equipos.
-
-* **Licencias de Software:** **0 €**. Todo el desarrollo se ha realizado con herramientas de código abierto (Java Swing, FlatLaf, Apache NetBeans) y licencias educativas gratuitas (Figma Education, GitHub Free).
-
-* **Costes indirectos y mantenimiento:** Se asignan **40 €** para cubrir los gastos de electricidad y de internet durante el trabajo en casa. Al funcionar sin internet, el coste de mantenimiento de servidores cuando se lance el producto será inexistente.
+Para que las cuentas salgan a cero en inversión inicial, hemos usado programas gratuitos y licencias de estudiante:
+- **Equipos (Hardware):** 0 €. Usamos los portátiles que ya teníamos de antes, así que no hemos comprado ningún ordenador.
+- **Licencias de programas:** 0 €. Todo lo hemos programado con herramientas libres o gratuitas (Java Swing, FlatLaf y NetBeans). Si fuéramos una empresa, tendríamos que pagar licencias como Figma Pro (unos 144 € al año) o cuentas de GitHub de pago, pero con la cuenta de estudiante y GitHub Free nos sale gratis.
+- **Servidores y alojamiento:** 0 €. Al ser un programa que se instala en el ordenador, no pagamos hosting ni bases de datos online. La app se descarga directamente desde la sección de *Releases* del repositorio de GitHub.
+- **Gastos de luz e internet:** Calculamos unos 40 € por persona (120,00 € en total) para cubrir lo que gastamos de luz y wifi trabajando desde casa. Al no usar servidores, después de entregar la app no habrá ningún gasto de mantenimiento.
 
 ### 2.6.4. Presupuesto desglosado
+En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo de dinero reservado por si surge algún problema:
 
 | Partida Presupuestaria | Concepto | Coste Estimado (€) |
 | :--- | :--- | :--- |
-| **Personal** | 3 alumnos simulando tarifa Júnior (120h a 10 €/h) | 1.200,00 € |
-| **Hardware** | Equipos personales de los alumnos | 0,00 € |
-| **Software / Servicios** | Licencias educativas y código abierto | 0,00 € |
-| **Gastos Indirectos** | Uso de electricidad e internet personal de cada uno | 40,00 € x 3 = 120,00€ |
-| **Subtotal** | Costes directos e indirectos | **1.200,00 €** |
-| **Imprevistos** | Margen para imprevistos (simulado) | 120,00 € |
-| **TOTAL PRESUPUESTO** | Coste total de la simulación del proyecto | **1.320,00 €** |
+| **Personal** | 3 alumnos con tarifa Júnior (420h efectivas a 10 €/h) | 4.200,00 € |
+| **Hardware** | Portátiles propios de los alumnos | 0,00 € |
+| **Software / Servicios** | Licencias gratis, código libre y GitHub Releases | 0,00 € |
+| **Gastos Indirectos** | Luz e internet de cada integrante (40,00 € x 3) | 120,00 € |
+| **Subtotal** | Costes directos e indirectos | **4.320,00 €** |
+| **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 432,00 € |
+| **TOTAL PRESUPUESTO** | Coste total estimado | **4.752,00 €** |
 
 ### 2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes
+Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el ROI (que es la fórmula que calcula si una inversión merece la pena) mirando el dinero que le hacemos ahorrar a los usuarios:
+- **Ahorro para el usuario:** La gente no tiene que pagar suscripciones anuales (como Splitwise Pro, que cuesta entre 35 € y 47,99 € al año) para meter gastos sin límites. Si 119 personas usan PayClear un año en lugar de pagar Splitwise Pro, el ahorro total para esos usuarios empata los 4.752,00 € que nos costaría hacer la aplicación.
+- **Mantenimiento sin gastos:** Como guardamos los datos en un archivo JSON dentro del ordenador del usuario, la aplicación no genera facturas mensuales de servidores y se puede usar gratis todo el tiempo que se quiera.
 
-Dado que PayClear es un proyecto académico sin fines de lucro, nos enfocaremos en el valor que aportaremos  y el ahorro final (ROI: indicador financiero que mide la rentabilidad de un proyecto comparando el beneficio que se obtiene con el coste que ha supuesto desarrollarlo.) : 
-* **Ahorro económico:** Evita al usuario pagar suscripciones (como los aprox. 30-40 € anuales de alternativas comerciales como Splitwise Pro) para tener funciones ilimitadas.
-* **Mantenimiento sostenible:** Al guardar toda la información localmente en formato JSON en el equipo del usuario, el proyecto no va a necesitar inversión continua en servidores y servicios en la nube. Una vez entregado el código, la aplicación funciona de forma autónoma y gratuita a largo plazo. 
+---
 
 **Fuentes de referencia (Bibliografía directa):**
-
-* **Precio hora programador: cuánto cobra un desarrollador** (Justificacion de la tarifa de 10 €/hora para un júnior).
-  Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
-* **Splitwise Pro: precio, qué incluye y si vale la pena** (Justificacion el coste real de la suscripción anual de hasta 47,99 € en España).
-  Enlace: https://www.spliteo.app/blog/es/precio-de-splitwise-pro/
-* **Metodo ROI: BBVA** 
-  Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
-
+- **Precio hora programador:** cuánto cobra un desarrollador (De aquí sacamos la tarifa de 10 €/hora para un júnior).
+  - Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
+- **Splitwise Pro:** precio, qué incluye y si merece la pena (Para justificar los 47,99 € al año que cuesta la competencia).
+  - Enlace: https://www.spliteo.app/blog/es/precio-de-splitwise-pro/
+- **Método ROI:** BBVA (Para explicar la fórmula del retorno de la inversión).
+  - Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
+    
+  ---
+  
 ## 2.7. Estudio de viabilidad legal y normativa
 ### 2.7.1. Protección de datos personales
 
