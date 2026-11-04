@@ -323,6 +323,5 @@ En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española d
 #### Fuentes utilizadas
 
 -   **Boletín Oficial del Estado (BOE).** Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).[https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)
--   **Agencia Española de Protección de Datos (AEPD).** Reglamento General de Protección de Datos (RGPD) y Guías de Privacidad desde el Diseño y por Defecto.[https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos/rgpd](https://www.google.com/search?q=https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos/rgpd&authuser=3)
 -   **Agencia Española de Protección de Datos (AEPD).** Preguntas Frecuentes: ¿Qué es la protección de datos desde el diseño y por defecto?[https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto](https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto)
 
