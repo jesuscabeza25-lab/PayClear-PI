@@ -180,58 +180,9 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 | **Proveedores Tecnológicos (GitHub, Flutter, Oracle...)** | Externo | Secundario | Respeto a las licencias de software libre y uso de sus APIs y librerías. | **Bajo**<br>*(Monitorizar)* | Control de licencias en la documentación técnica y seguimiento de *releases* oficiales en repositorios. |
 | **Competidores(Splitwise, Tricount, Settle Up)** | Externo | Secundario | Mantener su mercado y rentabilizar sus modelos de suscripción. | **Bajo**<br>*(Monitorizar)* | Análisis de *benchmarking* periódico para vigilar cambios en sus métodos de monetización y mantener la ventaja competitiva de PayClear. |
 
----
+## Fuentes Utilizadas:
 
-## 2.5. Estudio de viabilidad técnica
-
-### 2.5.1. Pila tecnológica
-
-* **Escritorio:** **Java 17** con **Java Swing** y la librería **FlatLaf** para poder tener una interfaz gráfica en más moderna en NetBeans Matisse.
-* **Móvil (penultima fase):** **Flutter (con Dart)** para compilar en Android.
-* **Persistencia y Seguridad:** Almacenamiento en local con **ficheros JSON** (usando la librería **Gson**) y proteger el acceso con **SHA-256**.
-* **Calidad y Pruebas:** **JUnit 5** para testear la lógica contable y el algoritmo voraz para las liquidaciones. 
-
-<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/f7ef95dd-6880-4ed1-a682-f7a52cac40dc" />
-
-### 2.5.2. Requisitos de hardware y despliegue
-
-### Sistemas Operativos
-
-| Sistema Operativo | Arquitectura / Procesador | Versiones Compatibles |
-| :--- | :--- | :--- |
-| **Windows** | x86_64 | Windows 10, 11<br>Server 2016, 2019, 2022, 2025 |
-| **Linux** | x64, AArch64 | Red Hat / RHEL 8, 9, 10 |
-| **Ubuntu** | x86_64 | 24.04 LTS, 25.04 |
-| **macOS** | Intel (x64) / Apple Silicon (ARM64) | macOS 12 Monterey o posterior  |
-
-### Requisitos de Hardware
-
-| Componente | Requisito Mínimo | Recomendado |  
-| :--- | :--- | :--- | 
-| **Memoria RAM** | 8 GB | 8 GB o más | 
-| **Espacio en Disco** | 300 MB *(solo JDK)* | 10 GB – 20 GB+ | 
-
-### 2.5.3. Curva de aprendizaje y madurez técnica
-- **Tecnologías dominadas:** Tenemos una base de principiantes en **Java**, POO y diseñar en **Swing/Matisse**.
-- **Formación necearia:** Usar **FlatLaf** y **Gson** requiere una curva de aprendizaje pequeñas (entre 1 y 2 días). Adaptarlo a **Flutter/Dart** tiene una curva media que se asume en la fase final gracias a su similitud sintáctica con Java y las clases dadas en la asignatura `Programación Multimedia y Dispositivos Móviles`
-
-### 2.5.4. Ficha técnica y conclusión
-
-| Parámetro | Especificación del Proyecto |
-| :--- | :--- |
-| **Arquitectura** | Local-First / Patrón Modelo Vista Controlador |
-| **Lenguajes y Entornos** | Java 17+ (NetBeans) y Dart (Flutter en Android Studio) |
-| **Interfaz Gráfica (UI)** | Java Swing + FlatLaf / Componentes propios (JavaBeans) |
-| **Persistencia y Seguridad** | Ficheros locales `.json` (con Gson) + encriptación Hash SHA-256 |
-| **Testing y Despliegue** | JUnit 5 / Ejecutable `.jar` (Escritorio) y `.apk` (Android) |
-
-**Conclusión de viabilidad:** El proyecto es **viable**. No necesita de infraestructura en la nube y usa tecnologías conocidas en el equipo, se garantiza el desarrollo y despliegue del software sin costes técnicos externos y dentro de los plazos del curso.
-
----
-
-## Fuentes:
-
-**Java21:** https://docs.oracle.com/es-ww/iaas/jms/doc/system-requirements.html , https://www.igmguru.com/blog/how-to-install-java
+**Java:** https://docs.oracle.com/es-ww/iaas/jms/doc/system-requirements.html , https://www.igmguru.com/blog/how-to-install-java
 
 **FlatLaf:** https://www.reddit.com/r/java/comments/lsbcwe/flatlaf_10_swing_look_and_feel/?tl=es-es , https://github.com/JFormDesigner/FlatLaf
 
@@ -241,12 +192,12 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 
 ---
 
-### 2.6. Estudio de viabilidad económica
+# 2.6. Estudio de viabilidad económica
 
-### 2.6.1. ¿En qué consiste?
+## 2.6.1. ¿En qué consiste?
 En este apartado miramos cuánto nos costaría desarrollar, lanzar y mantener PayClear si fuera un trabajo profesional. Queremos comprobar si la aplicación se puede sostener en el tiempo sin ocasionar grandes perdidas. Como es un programa que guarda todo en local (*Local-First*), los gastos bajan muchísimo porque no tenemos que pagar servidores ni bases de datos en la nube todos los meses.
 
-### 2.6.2. Estimación de costes de desarrollo (Personal)
+## 2.6.2. Estimación de costes de desarrollo (Personal)
 Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos mirado el horario de las asignaturas donde desarrollamos la app (Desarrollo de Interfaces y Proyecto Intermodular) durante los dos primeros trimestres:
 - **Carga de horas a la semana:** Tenemos 5 horas semanales de DII y 3 de PI, así que cada uno le dedica 8 horas a la semana.
 - **Horas reales por trimestre:**
@@ -256,14 +207,14 @@ Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos 
 - **Precio por hora:** Ponemos 10 €/hora, que es lo habitual para un desarrollador júnior que acaba de empezar.
 - **Coste de personal:** 420 horas × 10 €/h = 4.200,00 €.
 
-### 2.6.3. Costes de infraestructura, licencias e indirectos
+## 2.6.3. Costes de infraestructura, licencias e indirectos
 Para que las cuentas salgan a cero en inversión inicial, hemos usado programas gratuitos y licencias de estudiante:
 - **Equipos (Hardware):** 0 €. Usamos los portátiles que ya teníamos de antes, así que no hemos comprado ningún ordenador.
 - **Licencias de programas:** 0 €. Todo lo hemos programado con herramientas libres o gratuitas (Java Swing, FlatLaf y NetBeans). Si fuéramos una empresa, tendríamos que pagar licencias como Figma Pro (unos 144 € al año) o cuentas de GitHub de pago, pero con la cuenta de estudiante y GitHub Free nos sale gratis.
 - **Servidores y alojamiento:** 0 €. Al ser un programa que se instala en el ordenador, no pagamos hosting ni bases de datos online. La app se descarga directamente desde la sección de *Releases* del repositorio de GitHub.
 - **Gastos de luz e internet:** Calculamos unos 40 € por persona (120,00 € en total) para cubrir lo que gastamos de luz y wifi trabajando desde casa. Al no usar servidores, después de entregar la app no habrá ningún gasto de mantenimiento.
 
-### 2.6.4. Presupuesto desglosado
+## 2.6.4. Presupuesto desglosado
 En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo de dinero reservado por si surge algún problema:
 
 | Partida Presupuestaria | Concepto | Coste Estimado (€) |
@@ -276,14 +227,14 @@ En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo
 | **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 432,00 € |
 | **TOTAL PRESUPUESTO** | Coste total estimado | **4.752,00 €** |
 
-### 2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes
+## 2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes
 Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el ROI (que es la fórmula que calcula si una inversión merece la pena) mirando el dinero que le hacemos ahorrar a los usuarios:
 - **Ahorro para el usuario:** La gente no tiene que pagar suscripciones anuales (como Splitwise Pro, que cuesta entre 35 € y 47,99 € al año) para meter gastos sin límites. Si 119 personas usan PayClear un año en lugar de pagar Splitwise Pro, el ahorro total para esos usuarios empata los 4.752,00 € que nos costaría hacer la aplicación.
 - **Mantenimiento sin gastos:** Como guardamos los datos en un archivo JSON dentro del ordenador del usuario, la aplicación no genera facturas mensuales de servidores y se puede usar gratis todo el tiempo que se quiera.
 
 ---
 
-**Fuentes de referencia (Bibliografía directa):**
+**Fuentes de referencia:**
 - **Precio hora programador:** cuánto cobra un desarrollador (De aquí sacamos la tarifa de 10 €/hora para un júnior).
   - Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
 - **Splitwise Pro:** precio, qué incluye y si merece la pena (Para justificar los 47,99 € al año que cuesta la competencia).
@@ -293,8 +244,9 @@ Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el R
     
   ---
   
-## 2.7. Estudio de viabilidad legal y normativa
-### 2.7.1. Protección de datos personales
+# 2.7. Estudio de viabilidad legal y normativa
+
+## 2.7.1. Protección de datos personales
 
 El desarrollo y la arquitectura de PayClear se han diseñado garantizando el estricto cumplimiento del marco normativo europeo y español en materia de privacidad, concretamente el **Reglamento General de Protección de Datos (RGPD, Reglamento UE 2016/679)** y la **Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)**.
 
@@ -325,7 +277,7 @@ En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española d
     -   Si el usuario elimina un gasto o un grupo de la aplicación, el sistema ejecuta la supresión física e irreversible de dichos nodos en el fichero .json local.
     -   Si el usuario desinstala el programa o elimina el fichero .json de su disco duro, la destrucción de la información es inmediata y definitiva, cumpliendo al $100\\%$ el derecho de supresión (Art. 17 del RGPD) sin requerir solicitudes a terceros.
 
-#### Fuentes utilizadas
+## Fuentes utilizadas
 
 -   **Boletín Oficial del Estado (BOE).** Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).[https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)
 -   **Agencia Española de Protección de Datos (AEPD).** Preguntas Frecuentes: ¿Qué es la protección de datos desde el diseño y por defecto?[https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto](https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto)
