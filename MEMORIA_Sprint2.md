@@ -350,6 +350,40 @@ En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española d
 -   **Boletín Oficial del Estado (BOE).** Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).[https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)
 -   **Agencia Española de Protección de Datos (AEPD).** Preguntas Frecuentes: ¿Qué es la protección de datos desde el diseño y por defecto?[https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto](https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto)
 
+### 2.7.2. Propiedad intelectual y licencias
+
+#### 1\. Derechos de autor y licencia del proyecto
+
+El código fuente original, la arquitectura y los diseños de interfaz de PayClear han sido creados por el equipo del proyecto. De acuerdo con la legislación española (**Real Decreto Legislativo 1/1996, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual**), los derechos de autor sobre el software corresponden a sus creadores desde el momento de su programación.
+
+Para la distribución de la aplicación hemos elegido la **Licencia MIT**. Es una licencia de código abierto muy permisiva que encaja con el objetivo del proyecto:
+
+-   Permite a cualquier persona usar, estudiar, modificar y compartir el programa sin coste.
+-   Exime al equipo de desarrollo de responsabilidad sobre el uso que terceros hagan de la aplicación.
+-   Garantiza que PayClear se mantenga siempre como una herramienta gratuita, transparente y sin letra pequeña.
+
+#### 2\. Inventario de licencias de terceros
+
+Para desarrollar la aplicación hemos integrado librerías, entornos de trabajo y recursos gráficos de código abierto. En la siguiente tabla se detallan los componentes externos utilizados y sus licencias:
+
+| Componente / Recurso | Tipo / Función                      | Licencia de terceros                 | Compatibilidad con PayClear (MIT)                                                                     |
+| -------------------- | ----------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Java SE / OpenJDK 17 | Lenguaje y plataforma de ejecución  | GPLv2 con Classpath Exception        | Compatible. Permite ejecutar aplicaciones Swing sin obligar a usar la licencia GPL en nuestro código. |
+| FlatLaf              | Librería visual para Java Swing     | Apache License 2.0                   | Compatible. Licencia permisiva que se integra sin problemas en proyectos MIT.                         |
+| Google Gson          | Gestión y guardado de archivos JSON | Apache License 2.0                   | Compatible. Permite el uso y distribución libre junto a nuestro programa.                             |
+| JUnit 5              | Framework para pruebas unitarias    | Eclipse Public License 2.0 (EPL 2.0) | Compatible. Solo se utiliza durante el desarrollo y pruebas, no afecta al ejecutable final.           |
+| Tipografía Inter     | Fuente de texto de la interfaz      | SIL Open Font License 1.1 (OFL)      | Compatible. Diseñada específicamente para incluirse en programas de software de forma gratuita.       |
+| Iconos SVG           | Iconografía visual de la interfaz   | Licencia MIT / CC0                   | Compatible. Uso libre sin restricciones de derechos de autor.                                         |
+
+#### 3\. Análisis de compatibilidad legal
+
+Tras revisar las licencias de todos los componentes, confirmamos que **no existen conflictos ni incompatibilidades legales**. No se ha utilizado ninguna librería de tipo *copyleft* estricto (como GPLv3 en librerías vinculadas) que obligase a cambiar la licencia de nuestro proyecto, por lo que PayClear se puede distribuir bajo la Licencia MIT con total seguridad jurídica.
+
+#### Fuentes oficiales de referencia (España)
+
+-   **Boletín Oficial del Estado (BOE) – Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996):**  
+    [https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930](https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930)
+
 
 # 2.8. Análisis de riesgos inicial
 
