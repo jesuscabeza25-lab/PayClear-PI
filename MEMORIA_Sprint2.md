@@ -293,9 +293,9 @@ Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos 
 **2.6.3. Costes de infraestructura, licencias e indirectos**
 Los programas nos salen gratis, pero los portátiles se desgastan y gastan luz e internet mientras trabajamos, así que lo calculamos a partir de las 140 horas que dedica cada uno:
 - **Equipos (Hardware):** Aunque los portátiles ya eran nuestros, se desgastan al usarlos para el proyecto, así que ponemos la parte de ese desgaste que corresponde al proyecto (amortización):
-  - Vida útil contable: según la tabla de Hacienda, un ordenador se amortiza como mucho un 25% al año, así que su vida útil es de 4 años. Contando un año de trabajo de unas 1.760 horas (220 días de 8 horas), son 7.040 horas.
-  - Amortización por hora: lo que nos costó el portátil (700 €) entre su vida útil contable: 700 € / 7.040 h = 0,0994 €/h.
-  - Coste para el proyecto: amortización por hora × horas echadas al proyecto: 0,0994 €/h × 140 h = 13,92 € por persona. Entre los tres: **41,76 €**.
+  - Vida útil contable: según la tabla de Hacienda, un ordenador se amortiza como mucho un 25% al año, así que su vida útil es de 4 años. Contando las 1.800 horas al año del Convenio TIC (las mismas que pusimos en el Sprint 1), son 7.200 horas.
+  - Amortización por hora: lo que nos costó el portátil (700 €) entre su vida útil contable: 700 € / 7.200 h = 0,0972 €/h.
+  - Coste para el proyecto: amortización por hora × horas echadas al proyecto: 0,0972 €/h × 140 h = 13,61 € por persona. Entre los tres: **40,83 €**.
 - **Luz:** Multiplicamos la potencia del portátil por las horas y por el precio medio de la luz en España. Tomamos 65 W, que entra en el rango normal de un portátil (de 30 a 140 W), y 0,2739 €/kWh, que es lo que pagaron de media los hogares españoles en el primer semestre de 2026 con impuestos incluidos.
   - Por persona: 0,065 kW × 140 h = 9,1 kWh.
   - Entre los tres: 27,3 kWh × 0,2739 €/kWh = **7,48 €**.
@@ -311,18 +311,22 @@ En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo
 | Partida Presupuestaria | Concepto | Coste Estimado (€) |
 | :--- | :--- | :--- |
 | **Personal** | 3 alumnos con tarifa Júnior (420 h efectivas a 10 €/h) | 4.200,00 € |
-| **Hardware** | Amortización por hora de los portátiles (0,0994 €/h) × 420 h de proyecto | 41,76 € |
+| **Hardware** | Amortización por hora de los portátiles (0,0972 €/h) × 420 h de proyecto | 40,83 € |
 | **Software / Servicios** | Licencias gratis, código libre y GitHub Releases | 0,00 € |
 | **Gastos Indirectos (Luz)** | 65 W × 420 h = 27,3 kWh a 0,2739 €/kWh | 7,48 € |
 | **Gastos Indirectos (Internet)** | Fibra de 20 €/mes, parte proporcional (0,0278 €/h × 420 h) | 11,67 € |
-| **Subtotal** | Costes directos e indirectos | **4.260,91 €** |
-| **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 426,09 € |
-| **TOTAL PRESUPUESTO** | Coste total estimado | **4.687,00 €** |
+| **Subtotal** | Costes directos e indirectos | **4.259,98 €** |
+| **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 426,00 € |
+| **TOTAL PRESUPUESTO** | Coste total estimado | **4.685,98 €** |
 
 **2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes**
-Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el ROI (que es la fórmula que calcula si una inversión merece la pena) mirando el dinero que le hacemos ahorrar a los usuarios:
-- **Ahorro para el usuario:** La gente no tiene que pagar suscripciones anuales (como Splitwise Pro, que cuesta entre 35 € y 47,99 € al año) para meter gastos sin límites. Si 118 personas usan PayClear un año en lugar de pagar Splitwise Pro, el ahorro total para esos usuarios ya cubre los 4.687,00 € que nos costaría hacer la aplicación.
-- **Mantenimiento sin gastos:** Como guardamos los datos en un archivo JSON dentro del ordenador del usuario, la aplicación no genera facturas mensuales de servidores y se puede usar gratis todo el tiempo que se quiera.
+El ROI es la fórmula que calcula si una inversión merece la pena: **ROI = (ingresos − inversión) / inversión × 100**. Para el usuario normal PayClear va a ser siempre gratis, así que los ingresos tienen que salir de otro sitio. En el Sprint 1 ya dejamos apuntadas las vías para ganar dinero con la app, y la más clara es la **licencia de marca blanca** para organizaciones que gestionan grupos de personas, como residencias de estudiantes o edificios de pisos compartidos (el perfil de Javier en el 2.1):
+- **Precio de la licencia:** Ponemos 150 € por edificio, sin IVA, en un pago único y sin cuotas mensuales, que es justo lo que pide Javier. Incluye poner el nombre y el logo del edificio. Para comparar, que cuatro inquilinos pagaran Splitwise Pro les costaría al menos 140 € al año (4 × 35 €).
+- **Punto de equilibrio:** 4.685,98 € / 150 € = 31,2, así que con **32 licencias** ya recuperamos lo que cuesta hacer la aplicación.
+- **ROI con 40 licencias:** 40 × 150 € = 6.000 € de ingresos. ROI = (6.000 € − 4.685,98 €) / 4.685,98 € × 100 = **28 %**.
+- **Otras vías que no contamos:** El Sprint 1 también nombra la copia de seguridad o sincronización opcional y el soporte o las aportaciones de usuarios. No las metemos en la cuenta porque son más difíciles de estimar.
+- **Ahorro para el usuario:** Quien use PayClear no tiene que pagar Splitwise Pro (entre 35 € y 47,99 € al año) para meter gastos sin límites.
+- **Mantenimiento sin gastos:** Como guardamos los datos en un archivo JSON dentro del ordenador del usuario, la aplicación no genera facturas mensuales de servidores, así que cada licencia vendida es casi todo beneficio.
 
 ---
 
@@ -333,6 +337,7 @@ Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el R
   - Enlace: https://www.spliteo.app/blog/es/precio-de-splitwise-pro/
 - **Método ROI:** BBVA (Para explicar la fórmula del retorno de la inversión).
   - Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
+- **Vías de negocio y horas anuales:** Memoria del Sprint 1, apartados "Oportunidades de negocio previsibles" y 1.6.2 (Convenio Colectivo Estatal TIC, 1.800 horas al año).
 - **Tabla de amortización:** Quipu, tabla de amortización del Impuesto sobre Sociedades (De aquí sacamos el 25% anual para equipos informáticos).
   - Enlace: https://getquipu.com/blog/tabla-amortizaciones-impuesto-sociedades/
 - **Consumo de un portátil:** Repsol, consumo de un ordenador (Para el rango de 30 a 140 W y la fórmula potencia × horas).
