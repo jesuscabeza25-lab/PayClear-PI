@@ -1,3 +1,18 @@
+# Memoria del Proyecto Intermodular: PayClear
+
+* Asignatura: Proyecto Intermodular
+* Curso: 2º Desarrollo de Aplicaciones Multiplataforma (DAM)
+  
+COEVALUACIÓN SPRINT 1:
+
+| Integrante | Nota (%) |
+| :--- | :--- |
+| Guillermo Eugui | 100% |
+| Jesús Cabeza | 100% | 
+| JoseLuís Segura | 100% |
+
+---
+
 ## **2.1. SECTOR PROFESIONAL Y PERFIL DE USUARIOS**
 
 ### **2.1.1. Caracterización del sector profesional**
