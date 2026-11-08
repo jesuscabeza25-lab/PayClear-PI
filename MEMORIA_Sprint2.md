@@ -416,6 +416,46 @@ Tras revisar las licencias de todos los componentes, confirmamos que **no existe
 -   **Boletín Oficial del Estado (BOE) – Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996):**  
     [https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930](https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930)
 
+    ---
+
+    ### 2.7.3. Accesibilidad y otros requisitos aplicables
+
+Queremos que PayClear la pueda usar cualquiera, también quien ve mal o tiene problemas para manejar el ratón. Para decidir qué hacer nos hemos basado en las pautas **WCAG 2.1 (nivel AA)**, que son las que pide la norma europea **UNE-EN 301 549**. Estas pautas están pensadas sobre todo para webs, pero la mayoría de sus ideas sirven igual para una aplicación de escritorio.
+
+#### 2.7.3.1. Adopción de principios de accesibilidad
+
+Las WCAG se basan en cuatro principios, y en PayClear los aplicamos así:
+
+-   **Perceptible:** Los saldos se entienden aunque no se distingan los colores.
+-   **Operable:** Se podrá hacer todo con el teclado, sin tocar el ratón.
+-   **Comprensible:** Cada campo dice qué hay que escribir y, si algo falla, la aplicación explicará el motivo.
+-   **Robusto:** La aplicación tiene que funcionar bien con lectores de pantalla.
+
+#### 2.7.3.2. Justificación de decisiones en la interfaz
+
+Ahora mismo la versión en Java Swing es solo la maquetación, así que los atajos y los textos para el lector de pantalla se programarán cuando conectemos los eventos.
+
+-   **Contraste:** El texto normal necesita un contraste de al menos 4,5:1 con el fondo. Hemos comprobado los colores de la pantalla principal y los importes cumplen de sobra: el verde da 6,39:1 y el rojo 7,36:1. Donde no llegamos es en algunos textos en gris claro, como "Cuota por persona" (4,11:1) o el texto de ejemplo de los campos (2,56:1), así que los vamos a oscurecer.
+-   **No depender solo del color:** Una persona con daltonismo puede confundir el verde y el rojo. Por eso las tarjetas también llevan el signo del importe y una etiqueta ("+ ACREEDOR", "− DEUDOR" o "EQUILIBRADO").
+-   **Uso con teclado:** Tab para pasar de un campo a otro, en el mismo orden en que aparecen en pantalla, Enter para confirmar y Esc para cerrar las ventanas emergentes. También habrá atajos para lo más habitual, como Ctrl + N para añadir un gasto o Ctrl + L para bloquear la bóveda. FlatLaf recuadra el elemento seleccionado, así que siempre se ve dónde estás.
+-   **Tamaño de letra:** Tenemos textos de entre 8 y 10 px, por debajo de los 11 px que fijamos como mínimo en Desarrollo de Interfaces, así que los vamos a agrandar hasta ese mínimo. También comprobaremos que al ampliar al 200% desde la escala de Windows no se corte ningún importe.
+-   **Lectores de pantalla:** Una persona ciega puede usar un lector como NVDA, que es gratuito y lee en voz alta lo que hay en pantalla. Por eso las tarjetas de saldo y los botones que son solo un icono, como el ojo de la contraseña, tendrán un texto que el lector pueda leer.
+
+#### 2.7.3.3. Otros requisitos aplicables
+
+-   **Ley 11/2023:** Obliga a hacer accesibles ciertos productos y servicios, como los servicios bancarios, los libros electrónicos o el comercio electrónico. PayClear es gratuita y no mueve dinero real, por lo que entendemos que no nos afecta de forma directa. Si más adelante ofreciéramos la versión de marca blanca, habría que volver a revisarlo.
+  
+-   **Real Decreto 1112/2018:** Es para las webs y aplicaciones del sector público, así que tampoco nos afecta.
+
+#### Fuentes utilizadas
+
+-   **Universidad Miguel Hernández (UMH).** Guía de accesibilidad web UMH (versión completa). [https://sipt.umh.es/files/2020/07/Gu%C3%ADa-Completa-de-Accesibilidad-Web-UMH.pdf](https://sipt.umh.es/files/2020/07/Gu%C3%ADa-Completa-de-Accesibilidad-Web-UMH.pdf)
+-   **Universidad de Alicante.** Contraste. Accesibilidad Digital. [https://web.ua.es/es/accesibilidad/cadua/contraste.html](https://web.ua.es/es/accesibilidad/cadua/contraste.html)
+-   **Cuatrecasas.** Claves de la próxima entrada en vigor de la Ley de Accesibilidad en España. [https://www.cuatrecasas.com/es/global/propiedad-intelectual/art/claves-proxima-entrada-vigor-ley-accesibilidad-espana](https://www.cuatrecasas.com/es/global/propiedad-intelectual/art/claves-proxima-entrada-vigor-ley-accesibilidad-espana)
+-   **Comunidad de NVDA en español.** [https://www.nvda.es/](https://www.nvda.es/)
+  
+  ---
+
 
 # 2.8. Análisis de riesgos inicial
 
