@@ -3,7 +3,7 @@
 * Asignatura: Proyecto Intermodular
 * Curso: 2º Desarrollo de Aplicaciones Multiplataforma (DAM)
   
-COEVALUACIÓN SPRINT 1:
+COEVALUACIÓN SPRINT 2:
 
 | Integrante | Nota (%) |
 | :--- | :--- |
@@ -275,12 +275,12 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 ---
 
-# 2.6. Estudio de viabilidad económica
+### 2.6. Estudio de viabilidad económica
 
-## 2.6.1. ¿En qué consiste?
-En este apartado miramos cuánto nos costaría desarrollar, lanzar y mantener PayClear si fuera un trabajo profesional. Queremos comprobar si la aplicación se puede sostener en el tiempo sin ocasionar grandes perdidas. Como es un programa que guarda todo en local (*Local-First*), los gastos bajan muchísimo porque no tenemos que pagar servidores ni bases de datos en la nube todos los meses.
+**2.6.1. ¿En qué consiste?**
+En este apartado miramos cuánto nos costaría desarrollar, lanzar y mantener PayClear si fuera un trabajo profesional. Queremos comprobar si la aplicación se puede sostener en el tiempo sin ocasionar grandes pérdidas. Como es un programa que guarda todo en local (*Local-First*), los gastos bajan muchísimo porque no tenemos que pagar servidores ni bases de datos en la nube todos los meses.
 
-## 2.6.2. Estimación de costes de desarrollo (Personal)
+**2.6.2. Estimación de costes de desarrollo (Personal)**
 Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos mirado el horario de las asignaturas donde desarrollamos la app (Desarrollo de Interfaces y Proyecto Intermodular) durante los dos primeros trimestres:
 - **Carga de horas a la semana:** Tenemos 5 horas semanales de DII y 3 de PI, así que cada uno le dedica 8 horas a la semana.
 - **Horas reales por trimestre:**
@@ -290,41 +290,58 @@ Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos 
 - **Precio por hora:** Ponemos 10 €/hora, que es lo habitual para un desarrollador júnior que acaba de empezar.
 - **Coste de personal:** 420 horas × 10 €/h = 4.200,00 €.
 
-## 2.6.3. Costes de infraestructura, licencias e indirectos
-Para que las cuentas salgan a cero en inversión inicial, hemos usado programas gratuitos y licencias de estudiante:
-- **Equipos (Hardware):** 0 €. Usamos los portátiles que ya teníamos de antes, así que no hemos comprado ningún ordenador.
+**2.6.3. Costes de infraestructura, licencias e indirectos**
+Los programas nos salen gratis, pero los portátiles se desgastan y gastan luz e internet mientras trabajamos, así que lo calculamos a partir de las 140 horas que dedica cada uno:
+- **Equipos (Hardware):** Aunque los portátiles ya eran nuestros, se desgastan al usarlos para el proyecto, así que ponemos la parte de ese desgaste que corresponde al proyecto (amortización):
+  - Vida útil contable: según la tabla de Hacienda, un ordenador se amortiza como mucho un 25% al año, así que su vida útil es de 4 años. Contando un año de trabajo de unas 1.760 horas (220 días de 8 horas), son 7.040 horas.
+  - Amortización por hora: lo que nos costó el portátil (700 €) entre su vida útil contable: 700 € / 7.040 h = 0,0994 €/h.
+  - Coste para el proyecto: amortización por hora × horas echadas al proyecto: 0,0994 €/h × 140 h = 13,92 € por persona. Entre los tres: **41,76 €**.
+- **Luz:** Multiplicamos la potencia del portátil por las horas y por el precio medio de la luz en España. Tomamos 65 W, que entra en el rango normal de un portátil (de 30 a 140 W), y 0,2739 €/kWh, que es lo que pagaron de media los hogares españoles en el primer semestre de 2026 con impuestos incluidos.
+  - Por persona: 0,065 kW × 140 h = 9,1 kWh.
+  - Entre los tres: 27,3 kWh × 0,2739 €/kWh = **7,48 €**.
+- **Internet:** Usamos la conexión de casa para buscar documentación, subir los cambios a GitHub y hacer videollamadas, así que solo contamos la parte que corresponde al proyecto. Una tarifa de solo fibra ronda los 20 € al mes, y un mes tiene unas 720 horas (30 días × 24 h).
+  - Coste por hora: 20 € / 720 h = 0,0278 €/h.
+  - Por persona: 0,0278 €/h × 140 h = 3,89 €. Entre los tres: **11,67 €**.
 - **Licencias de programas:** 0 €. Todo lo hemos programado con herramientas libres o gratuitas (Java Swing, FlatLaf y NetBeans). Si fuéramos una empresa, tendríamos que pagar licencias como Figma Pro (unos 144 € al año) o cuentas de GitHub de pago, pero con la cuenta de estudiante y GitHub Free nos sale gratis.
-- **Servidores y alojamiento:** 0 €. Al ser un programa que se instala en el ordenador, no pagamos hosting ni bases de datos online. La app se descarga directamente desde la sección de *Releases* del repositorio de GitHub.
-- **Gastos de luz e internet:** Calculamos unos 40 € por persona (120,00 € en total) para cubrir lo que gastamos de luz y wifi trabajando desde casa. Al no usar servidores, después de entregar la app no habrá ningún gasto de mantenimiento.
+- **Servidores y alojamiento:** 0 €. Al ser un programa que se instala en el ordenador, no pagamos hosting ni bases de datos online. La app se descarga directamente desde la sección de *Releases* del repositorio de GitHub. Por eso, después de entregar la app no habrá ningún gasto de mantenimiento.
 
-## 2.6.4. Presupuesto desglosado
+**2.6.4. Presupuesto desglosado**
 En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo de dinero reservado por si surge algún problema:
 
 | Partida Presupuestaria | Concepto | Coste Estimado (€) |
 | :--- | :--- | :--- |
-| **Personal** | 3 alumnos con tarifa Júnior (420h efectivas a 10 €/h) | 4.200,00 € |
-| **Hardware** | Portátiles propios de los alumnos | 0,00 € |
+| **Personal** | 3 alumnos con tarifa Júnior (420 h efectivas a 10 €/h) | 4.200,00 € |
+| **Hardware** | Amortización por hora de los portátiles (0,0994 €/h) × 420 h de proyecto | 41,76 € |
 | **Software / Servicios** | Licencias gratis, código libre y GitHub Releases | 0,00 € |
-| **Gastos Indirectos** | Luz e internet de cada integrante (40,00 € x 3) | 120,00 € |
-| **Subtotal** | Costes directos e indirectos | **4.320,00 €** |
-| **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 432,00 € |
-| **TOTAL PRESUPUESTO** | Coste total estimado | **4.752,00 €** |
+| **Gastos Indirectos (Luz)** | 65 W × 420 h = 27,3 kWh a 0,2739 €/kWh | 7,48 € |
+| **Gastos Indirectos (Internet)** | Fibra de 20 €/mes, parte proporcional (0,0278 €/h × 420 h) | 11,67 € |
+| **Subtotal** | Costes directos e indirectos | **4.260,91 €** |
+| **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 426,09 € |
+| **TOTAL PRESUPUESTO** | Coste total estimado | **4.687,00 €** |
 
-## 2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes
+**2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes**
 Como esto es un proyecto para clase y no vamos a cobrar por la app, medimos el ROI (que es la fórmula que calcula si una inversión merece la pena) mirando el dinero que le hacemos ahorrar a los usuarios:
-- **Ahorro para el usuario:** La gente no tiene que pagar suscripciones anuales (como Splitwise Pro, que cuesta entre 35 € y 47,99 € al año) para meter gastos sin límites. Si 119 personas usan PayClear un año en lugar de pagar Splitwise Pro, el ahorro total para esos usuarios empata los 4.752,00 € que nos costaría hacer la aplicación.
+- **Ahorro para el usuario:** La gente no tiene que pagar suscripciones anuales (como Splitwise Pro, que cuesta entre 35 € y 47,99 € al año) para meter gastos sin límites. Si 118 personas usan PayClear un año en lugar de pagar Splitwise Pro, el ahorro total para esos usuarios ya cubre los 4.687,00 € que nos costaría hacer la aplicación.
 - **Mantenimiento sin gastos:** Como guardamos los datos en un archivo JSON dentro del ordenador del usuario, la aplicación no genera facturas mensuales de servidores y se puede usar gratis todo el tiempo que se quiera.
 
 ---
 
-**Fuentes de referencia:**
+**Fuentes de referencia (Bibliografía directa):**
 - **Precio hora programador:** cuánto cobra un desarrollador (De aquí sacamos la tarifa de 10 €/hora para un júnior).
   - Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
 - **Splitwise Pro:** precio, qué incluye y si merece la pena (Para justificar los 47,99 € al año que cuesta la competencia).
   - Enlace: https://www.spliteo.app/blog/es/precio-de-splitwise-pro/
 - **Método ROI:** BBVA (Para explicar la fórmula del retorno de la inversión).
   - Enlace: https://www.bbva.com/es/empresas/roi-que-es-el-retorno-de-la-inversion-y-cual-es-su-formula/
-    
+- **Tabla de amortización:** Quipu, tabla de amortización del Impuesto sobre Sociedades (De aquí sacamos el 25% anual para equipos informáticos).
+  - Enlace: https://getquipu.com/blog/tabla-amortizaciones-impuesto-sociedades/
+- **Consumo de un portátil:** Repsol, consumo de un ordenador (Para el rango de 30 a 140 W y la fórmula potencia × horas).
+  - Enlace: https://www.repsol.es/particulares/asesoramiento-consumo/cuanto-consume-ordenador/
+- **Precio de la luz:** Selectra, con datos de Eurostat (Para los 27,39 céntimos por kWh de media en 2026).
+  - Enlace: https://selectra.es/energia/noticias/kwh-luz-2026-consumo-bajo-precio-caro
+- **Precio de la fibra:** Rastreator, tarifas de fibra más baratas (Para los unos 20 € al mes de una tarifa de solo fibra).
+  - Enlace: https://www.rastreator.com/telefonia/guias/fibra-mas-barata
+
   ---
   
 # 2.7. Estudio de viabilidad legal y normativa
