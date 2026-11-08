@@ -330,3 +330,54 @@ En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española d
 -   **Boletín Oficial del Estado (BOE).** Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).[https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)
 -   **Agencia Española de Protección de Datos (AEPD).** Preguntas Frecuentes: ¿Qué es la protección de datos desde el diseño y por defecto?[https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto](https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/9-analisis-de-riesgos/FAQ-0224-que-es-la-proteccion-de-datos-desde-el-diseno-y-por-defecto)
 
+
+# 2.8. Análisis de riesgos inicial
+
+En lugar de esperar a que las cosas nos fallen, hemos identificado los puntos donde **PayClear** puede pararse, para poder tener claro cómo evitarlos y qué hacer si ocurren.
+
+## 2.8.1. Identificación de riesgos en PayClear
+* **Riesgos Técnicos y de Interfaz (`R-1`, `R-2`, `R-3`):**
+  * **Bloqueos en el diseñador visual y componentes a medida (`R-1`):** En **NetBeans Matisse** usando **FlatLaf** y componentes como son `TarjetaSaldoParticipante`, facilmente un fichero `.form` puede desincronizarse al hacer *merge* en Git.
+
+  * **Descuadres de calculos en el algoritmo voraz (`R-2`):** Al dividir tickets que no dan exacto (`10,00 €` entre 3 personas = `3,333...€`), operar con variables de longitud **double** puede provocar pérdidas de céntimos y que la suma de deudas no cuadre a cero.
+
+  * **Corrupción o pérdida del archivo `.json` local (`R-3`):** Como no hay base de datos en la nube, si el usuario cierra el programa de golpe mientras `Gson` escribe en disco o borra sin querer el archivo `.json`, perderá todas las cuentas del piso o del viaje.
+
+
+* **Riesgos de Entorno y Empaquetado (`R-4`):**
+  * **Versión de Java en otros PCs (`R-4`):** Que el ejecutable `.jar` falle por diferencias en la versión del JDK instalada.
+
+* **Riesgos de Planificación y Alcance (`R-5`):**
+  * **Querer abarcar demasiado antes de tiempo (*Scope Creep*) (`R-5`):** Liarnos a meter funciones secundarias o adelantar pantallas de la Fase 3 (móvil en Flutter) cuando todavía quedan entregas de los sprints de escritorio y de otras asignaturas de 2º DAM.
+
+* **Riesgos Operativos y de Equipo (`R-6`):**
+  * **Conflictos de Git o baja puntual de un compañero (`R-6`):** Fastidiar el código al tocar la misma clase (`VistaPrincipal` o `ControladorPrincipal`) a última hora, o que uno de los tres no pueda avanzar una semana por problemas personales o enfermedad.
+
+## 2.8.2. Criterios de evaluación (Probabilidad × Impacto)
+
+Para no valorar los riesgos a ojo, usamos dos sencillas variables:
+
+1. **Probabilidad de ocurrencia:** *Baja* (rara vez pasa), *Media* (puede pasar en algún sprint) o *Alta* (muy probable si no tenemos cuidado).
+
+2. **Impacto en el proyecto:** *Bajo* (molestia estética o retraso de un par de horas), *Medio* (nos obliga a rehacer una clase o vista) o *Alto* (rompe las cuentas, impide compilar o bloquea la entrega del sprint).
+
+Del cruce de ambas sale la **Severidad / Criticidad** (*Baja*, *Media*, *Alta* o *Crítica*), que marca a qué le damos prioridad.
+
+
+## 2.8.3. Matriz de Gestión de Riesgos y Plan de Mitigación
+
+| ID | Descripción del Riesgo | Probabilidad | Impacto | Severidad / Criticidad | Medida de Prevención (Antes) | Plan de Contingencia (Si ocurre) |
+| :---: | :--- | :---: | :---: | :---: | :--- | :--- |
+| **`R-01`** | Corrupción de ficheros `.form` de NetBeans o fallos al integrar componentes personalizados con `FlatLaf`. | Media | Alto | **Alta** | Separar las vistas en clases limpias y no editar nunca el bloque bloqueado de NetBeans a mano desde fuera del IDE. | Reconstruir el contenedor concreto por código Java puro (`JPanel` con `BorderLayout`/`GridLayout`) sin depender del `.form`. |
+| **`R-02`** | Errores de redondeo de coma flotante en repartos inexactos y en el algoritmo voraz de liquidación. | Media | Alto | **Alta** | Operar con `BigDecimal` (redondeo `HALF_UP` a 2 decimales) o trabajar internamente en céntimos enteros (`int`/`long`). | Asignar el céntimo sobrante o faltante de forma automática al pagador inicial del ticket y avisarlo en pantalla. |
+| **`R-03`** | Pérdida o corrupción del archivo `.json` local durante el guardado o por borrado accidental del usuario. | Baja | Alto | **Media** | Escribir primero en un fichero temporal (`.tmp`) antes de reemplazar el `.json` y validar la estructura al arrancar. | Generar un `.bak` automático en cada sesión y añadir un botón para restaurar o importar copia de seguridad manual. |
+| **`R-04`** | Incompatibilidad de versiones de Java (JDK) o mal escalado visual en monitores con diferente resolución. | Media | Medio | **Media** | Fijar la misma versión LTS de JDK en los 3 equipos del grupo y usar contenedores flexibles con tamaños mínimos definidos. | Empaquetar un *Fat JAR* con todas las librerías incluidas (`FlatLaf`, `Gson`) y forzar propiedades de escalado del sistema al iniciar. |
+| **`R-05`** | Desviación del alcance (*Scope Creep*) o falta de tiempo al coincidir entregas de varios módulos de 2º DAM. | Alta | Medio | **Alta** | Cerrar las tarjetas de cada sprint en GitHub Projects y priorizar siempre el flujo principal (MVP) antes que los extras. | Recortar funciones secundarias (como filtros avanzados o estadísticas extra) y pasarlas al backlog del siguiente sprint. |
+| **`R-06`** | Conflictos al unir ramas en GitHub (*merge conflicts*) o indisposición puntual de uno de los tres miembros. | Media | Medio | **Media** | Trabajar cada tarea en su propia rama/issue de GitHub y hacer *pull* antes de tocar `ControladorPrincipal` o la memoria. | Revisar el historial de commits para revertir el choque y reasignar la tarjeta pendiente entre los otros dos compañeros. |
+
+## Fuentes utilizadas
+
+* **Asana.** (2026). *Matriz de riesgos: qué es, cómo crearla y ejemplos*. https://asana.com/es/resources/risk-matrix-template
+* **INCIBE (Instituto Nacional de Ciberseguridad).** *¡Fácil y sencillo! Análisis de riesgos en 6 pasos*. https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo
+* **Inforges.** (2026). *Cómo hacer un plan de gestión de riesgos: Guía Completa*. https://inforges.es/blog/guia-plan-de-gestion-de-riesgos/
+* **Sinnaps.** *¿Cómo hacer un análisis de riesgos de un proyecto?*. https://sinnaps.com/blog-gestion-proyectos/analisis-riesgos-proyecto
