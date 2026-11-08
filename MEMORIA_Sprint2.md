@@ -182,13 +182,9 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 
 ## Fuentes Utilizadas:
 
-**Java:** https://docs.oracle.com/es-ww/iaas/jms/doc/system-requirements.html , https://www.igmguru.com/blog/how-to-install-java
+BBVA. (2026, 7 de abril). Qué son los 'stakeholders' y cómo influyen en la estrategia empresarial - BBVA.com. https://www.bbva.com/es/empresas/que-son-los-stakeholders-y-como-influyen-en-la-estrategia-empresarial/
 
-**FlatLaf:** https://www.reddit.com/r/java/comments/lsbcwe/flatlaf_10_swing_look_and_feel/?tl=es-es , https://github.com/JFormDesigner/FlatLaf
-
-**Gson:** https://dam.org.es/gson/ , https://ironpdf.com/es/java/blog/java-help/gson-java/
-
-**JUnit5:** https://es.parasoft.com/glossary/junit/ , https://www.arquitecturajava.com/junit-5-novedades-y-buenas-practicas/
+AEPD. (2019, 11 de julio). La AEPD publica un informe sobre el tratamiento de datos y borrado seguro - AEPD.es. https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-publica-un-informe-sobre-el-tratamiento-de-datos
 
 ---
 
