@@ -192,6 +192,78 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 
 ---
 
+ # 2.5. Estudio de viabilidad técnica
+
+## 2.5.1. Pila tecnológica (Tech Stack)
+
+La selección de tecnologías responde a la necesidad de construir una solución desacoplada, ligera y con filosofía **Local-First**:
+
+* **Entorno de Escritorio:** **Java 17 LTS** utilizando **Java Swing** junto con la librería de temas **FlatLaf**, lo que permite modernizar la apariencia gráfica sobre el diseñador visual Matisse de Apache NetBeans sin penalizar el rendimiento ni introducir dependencias pesadas.
+* **Persistencia y Seguridad Local:** Almacenamiento local mediante ficheros planos estructurados en formato **JSON**, serializados y parseados con la librería **Gson** de Google. El control de acceso a la bóveda privada se valida mediante la función resumen criptográfica **SHA-256** con sal (*salt*) local, sin requerir servicios de autenticación externos.
+* **Calidad y Pruebas Unitarias:** Integración de **JUnit 5** para auditar y verificar matemáticamente la lógica contable del modelo y el correcto funcionamiento de la heurística voraz de liquidación multilateral.
+* **Extensión Móvil (Fase posterior):** **Flutter** y **Dart** para compilar binarios nativos en **Android**, reutilizando la arquitectura conceptual de los modelos contables definidos en escritorio.
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/f7ef95dd-6880-4ed1-a682-f7a52cac40dc" />
+
+
+---
+
+## 2.5.2. Requisitos de hardware y despliegue
+
+### Compatibilidad de Sistemas Operativos (Entorno de Ejecución)
+
+| Sistema Operativo | Arquitectura / Procesador | Versiones Compatibles Soportadas |
+| :--- | :---: | :--- |
+| **Windows** | x86_64 | Windows 10, 11 (y Windows Server 2016 o posterior) |
+| **Linux** | x64, AArch64 | Ubuntu 22.04 LTS / 24.04 LTS, Debian 11+, Red Hat / Fedora |
+| **macOS** | Intel (x64) / Apple Silicon (ARM64) | macOS 12 Monterey o superior |
+
+### Especificaciones de Hardware
+
+| Recurso | Entorno de Ejecución Cliente (Usuario Final) | Entorno de Desarrollo (Equipo de Trabajo) |
+| :--- | :---: | :---: |
+| **Procesador (CPU)** | 1.0 GHz (Dual-Core o superior) | 2.0 GHz (Quad-Core o superior) |
+| **Memoria RAM** | 512 MB dedicados (mínimo de sistema: 2 GB) | 8 GB de RAM (16 GB recomendado) |
+| **Espacio en Disco** | < 100 MB (incluyendo runtime JRE y ficheros .json) | 10 GB (Apache NetBeans, JDK 17, Android Studio) |
+| **Pantalla** | Resolución mínima: 1024 × 768 px | Resolución mínima: 1920 × 1080 px (FHD) |
+
+---
+
+## 2.5.3. Curva de aprendizaje y madurez técnica
+
+* **Competencias consolidadas del equipo:** El equipo dispone de una base sólida en programación orientada a objetos (POO), arquitectura modular, colecciones de datos y diseño básico de formularios con Swing y Matisse, adquiridas y afianzadas en el ciclo formativo.
+* **Período de autoformación e integración:**
+  * **FlatLaf y Gson (Curva mínima, 1-2 días):** La integración de estilos FlatLaf y la serialización JSON con Gson no alteran el flujo clásico de Swing, requiriendo únicamente configurar dependencias y asimilar la sintaxis del parser.
+  * **Flutter y Dart (Curva moderada, planificada en PMDM):** La traslación hacia el cliente móvil se aborda de forma escalonada en el tramo final del curso, aprovechando la similitud sintáctica entre Dart y Java junto con el aprendizaje adquirido en el módulo de *Programación Multimedia y Dispositivos Móviles*.
+
+---
+
+## 2.5.4. Ficha técnica y conclusión
+
+| Parámetro | Especificación del Proyecto |
+| :--- | :--- |
+| **Paradigma y Arquitectura** | Local-First / Patrón Modelo-Vista-Controlador (MVC) |
+| **Lenguajes y Entornos** | Java 17 LTS (Apache NetBeans) y Dart 3+ (Flutter / Android Studio) |
+| **Capa de Presentación (UI)** | Java Swing + Look and Feel FlatLaf / Componentes visuales desacoplados |
+| **Persistencia de Datos** | Ficheros JSON locales mediante Google Gson (sin backend remoto) |
+| **Mecanismo de Seguridad** | Hashing criptográfico unidireccional SHA-256 para validación de PIN |
+| **Control de Calidad (QA)** | Batería de pruebas unitarias automatizadas con JUnit 5 |
+| **Despliegue y Empaquetado** | Ejecutable multiplataforma `.jar` (escritorio) y paquete compilado `.apk` (Android) |
+
+> **Conclusión de viabilidad técnica:** El proyecto resulta plenamente viable. Al apoyarse en herramientas maduras, estándares consolidados del ecosistema Java y prescindir por diseño de infraestructura en la nube, el equipo cuenta con la capacidad técnica requerida para culminar el desarrollo, las pruebas y el despliegue dentro del calendario académico establecido.
+
+## Bibliografía:
+
+**Java:** https://docs.oracle.com/es-ww/iaas/jms/doc/system-requirements.html , https://www.igmguru.com/blog/how-to-install-java
+
+**FlatLaf:** https://www.reddit.com/r/java/comments/lsbcwe/flatlaf_10_swing_look_and_feel/?tl=es-es , https://github.com/JFormDesigner/FlatLaf
+
+**Gson:** https://dam.org.es/gson/ , https://ironpdf.com/es/java/blog/java-help/gson-java/
+
+**JUnit5:** https://es.parasoft.com/glossary/junit/ , https://www.arquitecturajava.com/junit-5-novedades-y-buenas-practicas/
+
+---
+
 # 2.6. Estudio de viabilidad económica
 
 ## 2.6.1. ¿En qué consiste?
