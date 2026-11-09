@@ -391,36 +391,38 @@ En cumplimiento del Art. 25 del RGPD y las directrices de la Agencia Española d
 
 #### 1\. Derechos de autor y licencia del proyecto
 
-Los derechos de autor sobre el software, la arquitectura y los diseños de interfaz desarrollados en el marco de PayClear corresponden a sus autores (el equipo de desarrollo), según lo establecido en la legislación española (Real Decreto Legislativo 1/1996, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual).
+Los derechos de autor sobre el software, la arquitectura de componentes y la interfaz desarrollados para PayClear corresponden a sus autores (el equipo de desarrollo), según lo establecido en la legislación española (**Real Decreto Legislativo 1/1996, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual**).
 
-Para la distribución del proyecto hemos seleccionado la Licencia MIT. Se trata de una licencia de código abierto permisiva que encaja de manera natural con los objetivos del software:
+Para la distribución de la aplicación hemos seleccionado la **Licencia MIT**. Se trata de una licencia de código abierto altamente permisiva que encaja de forma directa con los principios técnicos y económicos del proyecto:
 
--   **Libertad de uso y estudio:** Permite a los usuarios utilizar, examinar y modificar el código sin cuotas ni restricciones.
--   **Compatibilidad comercial (Modelo B2B):** Autoriza expresamente el uso comercial, permitiendo la adaptación de versiones de marca blanca para empresas (residencias o gestoras) sin comprometer la autoría original.
--   **Exención de responsabilidad:** Protege legalmente al equipo de desarrollo frente a garantías o fallos derivados del uso de la herramienta en dispositivos de terceros.
+-   **Libertad de uso y estudio:** Permite a cualquier usuario o comunidad utilizar, auditar y modificar el código de manera transparente y sin cuotas.
+-   **Compatibilidad con el modelo de negocio (B2B Marca Blanca):** La Licencia MIT autoriza de forma explícita la modificación y comercialización del software. Esto permite empaquetar y vender versiones personalizadas de marca blanca a clientes empresa (como residencias estudiantiles o gestoras de alquileres) sin romper la autoría del código original.
+-   **Exención de responsabilidad:** Incluye una cláusula explícita que libera al equipo de desarrollo de cualquier garantía o responsabilidad legal derivada de errores o mal uso del programa en los equipos de los usuarios final.
+-   **Coherencia con el estudio económico (Coste 0,00 €):** Justifica la partida presupuestaria de software a coste cero descrita en el apartado de viabilidad económica, asegurando la viabilidad del proyecto sin gastos de licencias comerciales.
 
 #### 2\. Inventario de licencias de terceros
 
-El desarrollo de la aplicación se apoya en librerías, marcos de trabajo y recursos gráficos de código abierto. En la siguiente tabla se detallan los componentes externos integrados y sus respectivas licencias:
+El desarrollo de la aplicación se apoya en librerías de código abierto, entornos de ejecución y recursos tipográficos y gráficos libres. En la siguiente tabla se detallan los componentes externos utilizados y sus correspondientes licencias:
 
-| Componente / Recurso | Tipo / Función             | Licencia de terceros                 | Compatibilidad con PayClear (MIT)                                                                                     |
-| -------------------- | -------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| Java SE / OpenJDK 17 | Plataforma de ejecución    | GPLv2 con Classpath Exception        | Compatible. La excepción de Classpath permite ejecutar aplicaciones Swing sin obligar a aplicar GPL al código propio. |
-| FlatLaf              | Tema visual para Swing     | Apache License 2.0                   | Compatible. Licencia permisiva que se integra sin restricciones en proyectos MIT.                                     |
-| Google Gson          | Persistencia y parseo JSON | Apache License 2.0                   | Compatible. Permite la libre distribución e inclusión junto al binario de la aplicación.                              |
-| JUnit 5              | Framework de pruebas       | Eclipse Public License 2.0 (EPL 2.0) | Compatible. Se limita al entorno de desarrollo y pruebas unitarias, sin empaquetarse en el ejecutable final.          |
-| Tipografía Inter     | Fuente de la interfaz      | SIL Open Font License 1.1 (OFL)      | Compatible. Diseñada específicamente para ser incrustada en software de forma gratuita.                               |
-| Iconos SVG           | Recursos gráficos de la UI | Licencia MIT / CC0                   | Compatible. Uso libre sin restricciones de derechos de autor.                                                         |
+| Componente / Recurso          | Tipo / Función                     | Licencia de terceros                 | Compatibilidad con PayClear (MIT)                                                                                                          |
+| ----------------------------- | ---------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Java SE / OpenJDK 17          | Lenguaje y plataforma de ejecución | GPLv2 con Classpath Exception        | Compatible. La excepción de Classpath permite ejecutar aplicaciones Swing sin obligar a aplicar la licencia GPL a nuestro código original. |
+| FlatLaf                       | Librería visual para Java Swing    | Apache License 2.0                   | Compatible. Licencia permisiva que se integra sin restricciones en proyectos distribuidos bajo MIT.                                        |
+| Google Gson                   | Gestión y parseo de archivos JSON  | Apache License 2.0                   | Compatible. Permite el uso, empaquetado y distribución libre junto al ejecutable de la aplicación.                                         |
+| JUnit 5                       | Framework para pruebas unitarias   | Eclipse Public License 2.0 (EPL 2.0) | Compatible. Uso acotado a la fase de pruebas y desarrollo (test-scope); no se empaqueta ni afecta al ejecutable final .jar.                |
+| Tipografías Manrope y DM Sans | Fuentes de texto de la interfaz    | SIL Open Font License 1.1 (OFL)      | Compatible. Diseñadas e incrustadas específicamente para su uso e inclusión gratuita en aplicaciones de software.                          |
+| Iconos SVG                    | Iconografía visual de la interfaz  | Licencia MIT / CC0                   | Compatible. Recursos de uso libre sin restricciones de derechos de autor ni atribuciones complejas.                                        |
 
 #### 3\. Análisis de compatibilidad legal
 
-Tras auditar el conjunto de dependencias, confirmamos que no existen incompatibilidades normativas ni conflictos de licencias. Al no integrar librerías de copyleft fuerte (como GPLv3 vinculada), PayClear mantiene su independencia jurídica y puede distribuirse bajo la Licencia MIT sin impedimentos legales.
+Tras revisar de forma exhaustiva las licencias de todos los componentes integrados, confirmamos que no existen incompatibilidades ni conflictos legales.
+
+No se ha incorporado ninguna librería sujeta a licencias de copyleft estricto (como GPLv3 pura en componentes enlazados) que obligase a modificar la licencia de PayClear. Por tanto, la aplicación se puede empaquetar y distribuir bajo la Licencia MIT con total seguridad jurídica y plena compatibilidad comercial.
 
 #### Fuentes oficiales de referencia (España)
 
 -   **Boletín Oficial del Estado (BOE) – Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996):**  
     [https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930](https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930)
-    ---
 
 ### 2.7.3. Accesibilidad y otros requisitos aplicables
 
