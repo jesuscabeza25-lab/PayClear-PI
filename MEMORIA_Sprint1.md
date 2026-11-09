@@ -7,9 +7,9 @@ COEVALUACIÓN SPRINT 1:
 
 | Integrante | Nota (%) |
 | :--- | :--- |
-| Guillermo Eugui | 100% |
-| Jesús Cabeza | 100% | 
-| JoseLuís Segura | 100% |
+| Guillermo Eugui | 85% |
+| Jesús Cabeza | 90% | 
+| JoseLuís Segura | 90% |
 
 ---
 
