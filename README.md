@@ -14,8 +14,8 @@
 
 </div>
 
-Ver la memoria técnica del **Sprint 1** en: [MEMORIA_Sprint1.md.md](MEMORIA_Sprint1.md)
-Ver la memoria técnica del **Sprint 2** en: [MEMORIA_Sprint2.md.md](MEMORIA_Sprint2.md)
+* Ver la memoria técnica del **Sprint 1** en: [MEMORIA_Sprint1.md](MEMORIA_Sprint1.md)
+* Ver la memoria técnica del **Sprint 2** en: [MEMORIA_Sprint2.md](MEMORIA_Sprint2.md)
 
 ---
 
