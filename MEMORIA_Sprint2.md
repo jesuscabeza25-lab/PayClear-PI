@@ -184,7 +184,7 @@ https://www.larazon.es/tecnologia-consumo/aplicaciones/aplicaciones-dividir-comp
 
 ---
 
-# 2.4. Partes interesadas
+## 2.4. Partes interesadas
 
 | Rol | Tipo | Categoría | Expectativas Principales | Nivel de Influencia | Estrategia de Comunicación Recomendada |
 | :--- | :---: | :---: | :--- | :---: | :--- |
@@ -203,9 +203,9 @@ AEPD. (2019, 11 de julio). La AEPD publica un informe sobre el tratamiento de da
 
 ---
 
- # 2.5. Estudio de viabilidad técnica
+## 2.5. Estudio de viabilidad técnica
 
-## 2.5.1. Pila tecnológica (Tech Stack)
+### 2.5.1. Pila tecnológica (Tech Stack)
 
 La selección de tecnologías responde a la necesidad de construir una solución desacoplada, ligera y con filosofía **Local-First**:
 
@@ -219,7 +219,7 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 ---
 
-## 2.5.2. Requisitos de hardware y despliegue
+### 2.5.2. Requisitos de hardware y despliegue
 
 ### Compatibilidad de Sistemas Operativos (Entorno de Ejecución)
 
@@ -240,7 +240,7 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 ---
 
-## 2.5.3. Curva de aprendizaje y madurez técnica
+### 2.5.3. Curva de aprendizaje y madurez técnica
 
 * **Competencias consolidadas del equipo:** El equipo dispone de una base sólida en programación orientada a objetos (POO), arquitectura modular, colecciones de datos y diseño básico de formularios con Swing y Matisse, adquiridas y afianzadas en el ciclo formativo.
 * **Período de autoformación e integración:**
@@ -249,7 +249,7 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 ---
 
-## 2.5.4. Ficha técnica y conclusión
+### 2.5.4. Ficha técnica y conclusión
 
 | Parámetro | Especificación del Proyecto |
 | :--- | :--- |
@@ -263,7 +263,7 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 > **Conclusión de viabilidad técnica:** El proyecto resulta plenamente viable. Al apoyarse en herramientas maduras, estándares consolidados del ecosistema Java y prescindir por diseño de infraestructura en la nube, el equipo cuenta con la capacidad técnica requerida para culminar el desarrollo, las pruebas y el despliegue dentro del calendario académico establecido.
 
-## Bibliografía:
+## Fuentes Utilizadas:
 
 **Java:** https://docs.oracle.com/es-ww/iaas/jms/doc/system-requirements.html , https://www.igmguru.com/blog/how-to-install-java
 
@@ -275,12 +275,12 @@ La selección de tecnologías responde a la necesidad de construir una solución
 
 ---
 
-### 2.6. Estudio de viabilidad económica
+## 2.6. Estudio de viabilidad económica
 
-**2.6.1. ¿En qué consiste?**
+### **2.6.1. ¿En qué consiste?**
 En este apartado miramos cuánto nos costaría desarrollar, lanzar y mantener PayClear si fuera un trabajo profesional. Queremos comprobar si la aplicación se puede sostener en el tiempo sin ocasionar grandes pérdidas. Como es un programa que guarda todo en local (*Local-First*), los gastos bajan muchísimo porque no tenemos que pagar servidores ni bases de datos en la nube todos los meses.
 
-**2.6.2. Estimación de costes de desarrollo (Personal)**
+### **2.6.2. Estimación de costes de desarrollo (Personal)**
 Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos mirado el horario de las asignaturas donde desarrollamos la app (Desarrollo de Interfaces y Proyecto Intermodular) durante los dos primeros trimestres:
 - **Carga de horas a la semana:** Tenemos 5 horas semanales de DII y 3 de PI, así que cada uno le dedica 8 horas a la semana.
 - **Horas reales por trimestre:**
@@ -290,7 +290,7 @@ Para calcular lo que costaría la mano de obra sin inventarnos las horas, hemos 
 - **Precio por hora:** Ponemos 10 €/hora, que es lo habitual para un desarrollador júnior que acaba de empezar.
 - **Coste de personal:** 420 horas × 10 €/h = 4.200,00 €.
 
-**2.6.3. Costes de infraestructura, licencias e indirectos**
+### **2.6.3. Costes de infraestructura, licencias e indirectos**
 Los programas nos salen gratis, pero los portátiles se desgastan y gastan luz e internet mientras trabajamos, así que lo calculamos a partir de las 140 horas que dedica cada uno:
 - **Equipos (Hardware):** Aunque los portátiles ya eran nuestros, se desgastan al usarlos para el proyecto, así que ponemos la parte de ese desgaste que corresponde al proyecto (amortización):
   - Vida útil contable: según la tabla de Hacienda, un ordenador se amortiza como mucho un 25% al año, así que su vida útil es de 4 años. Contando las 1.800 horas al año del Convenio TIC (las mismas que pusimos en el Sprint 1), son 7.200 horas.
@@ -305,7 +305,7 @@ Los programas nos salen gratis, pero los portátiles se desgastan y gastan luz e
 - **Licencias de programas:** 0 €. Todo lo hemos programado con herramientas libres o gratuitas (Java Swing, FlatLaf y NetBeans). Si fuéramos una empresa, tendríamos que pagar licencias como Figma Pro (unos 144 € al año) o cuentas de GitHub de pago, pero con la cuenta de estudiante y GitHub Free nos sale gratis.
 - **Servidores y alojamiento:** 0 €. Al ser un programa que se instala en el ordenador, no pagamos hosting ni bases de datos online. La app se descarga directamente desde la sección de *Releases* del repositorio de GitHub. Por eso, después de entregar la app no habrá ningún gasto de mantenimiento.
 
-**2.6.4. Presupuesto desglosado**
+### **2.6.4. Presupuesto desglosado**
 En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo de dinero reservado por si surge algún problema:
 
 | Partida Presupuestaria | Concepto | Coste Estimado (€) |
@@ -319,7 +319,7 @@ En esta tabla dejamos las cuentas del proyecto bien organizadas, añadiendo algo
 | **Imprevistos (Riesgos)** | Un 10% guardado por si nos retrasamos o hay que comprar algo | 426,00 € |
 | **TOTAL PRESUPUESTO** | Coste total estimado | **4.685,98 €** |
 
-**2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes**
+### **2.6.5. Análisis del Retorno de la Inversión (ROI) y ahorro de costes**
 El ROI es la fórmula que calcula si una inversión merece la pena: **ROI = (ingresos − inversión) / inversión × 100**. Para el usuario normal PayClear va a ser siempre gratis, así que los ingresos tienen que salir de otro sitio. En el Sprint 1 ya dejamos apuntadas las vías para ganar dinero con la app, y la más clara es la **licencia de marca blanca** para organizaciones que gestionan grupos de personas, como residencias de estudiantes o edificios de pisos compartidos (el perfil de Javier en el 2.1):
 - **Precio de la licencia:** Ponemos 150 € por edificio, sin IVA, en un pago único y sin cuotas mensuales, que es justo lo que pide Javier. Incluye poner el nombre y el logo del edificio. Para comparar, que cuatro inquilinos pagaran Splitwise Pro les costaría al menos 140 € al año (4 × 35 €).
 - **Punto de equilibrio:** 4.685,98 € / 150 € = 31,2, así que con **32 licencias** ya recuperamos lo que cuesta hacer la aplicación.
@@ -330,7 +330,7 @@ El ROI es la fórmula que calcula si una inversión merece la pena: **ROI = (ing
 
 ---
 
-**Fuentes de referencia (Bibliografía directa):**
+### **Fuentes Utilizadas:**
 - **Precio hora programador:** cuánto cobra un desarrollador (De aquí sacamos la tarifa de 10 €/hora para un júnior).
   - Enlace: https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/
 - **Splitwise Pro:** precio, qué incluye y si merece la pena (Para justificar los 47,99 € al año que cuesta la competencia).
@@ -349,9 +349,9 @@ El ROI es la fórmula que calcula si una inversión merece la pena: **ROI = (ing
 
   ---
   
-# 2.7. Estudio de viabilidad legal y normativa
+## 2.7. Estudio de viabilidad legal y normativa
 
-## 2.7.1. Protección de datos personales
+### 2.7.1. Protección de datos personales
 
 El desarrollo y la arquitectura de PayClear se han diseñado garantizando el estricto cumplimiento del marco normativo europeo y español en materia de privacidad, concretamente el **Reglamento General de Protección de Datos (RGPD, Reglamento UE 2016/679)** y la **Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)**.
 
@@ -423,11 +423,11 @@ Tras revisar las licencias de todos los componentes, confirmamos que **no existe
 
     ---
 
-    ### 2.7.3. Accesibilidad y otros requisitos aplicables
+### 2.7.3. Accesibilidad y otros requisitos aplicables
 
 Queremos que PayClear la pueda usar cualquiera, también quien ve mal o tiene problemas para manejar el ratón. Para decidir qué hacer nos hemos basado en las pautas **WCAG 2.1 (nivel AA)**, que son las que pide la norma europea **UNE-EN 301 549**. Estas pautas están pensadas sobre todo para webs, pero la mayoría de sus ideas sirven igual para una aplicación de escritorio.
 
-#### 2.7.3.1. Adopción de principios de accesibilidad
+####  2.7.3.1. Adopción de principios de accesibilidad
 
 Las WCAG se basan en cuatro principios, y en PayClear los aplicamos así:
 
@@ -462,11 +462,11 @@ Ahora mismo la versión en Java Swing es solo la maquetación, así que los ataj
   ---
 
 
-# 2.8. Análisis de riesgos inicial
+## 2.8. Análisis de riesgos inicial
 
 En lugar de esperar a que las cosas nos fallen, hemos identificado los puntos donde **PayClear** puede pararse, para poder tener claro cómo evitarlos y qué hacer si ocurren.
 
-## 2.8.1. Identificación de riesgos en PayClear
+### 2.8.1. Identificación de riesgos en PayClear
 * **Riesgos Técnicos y de Interfaz (`R-1`, `R-2`, `R-3`):**
   * **Bloqueos en el diseñador visual y componentes a medida (`R-1`):** En **NetBeans Matisse** usando **FlatLaf** y componentes como son `TarjetaSaldoParticipante`, facilmente un fichero `.form` puede desincronizarse al hacer *merge* en Git.
 
@@ -484,7 +484,7 @@ En lugar de esperar a que las cosas nos fallen, hemos identificado los puntos do
 * **Riesgos Operativos y de Equipo (`R-6`):**
   * **Conflictos de Git o baja puntual de un compañero (`R-6`):** Fastidiar el código al tocar la misma clase (`VistaPrincipal` o `ControladorPrincipal`) a última hora, o que uno de los tres no pueda avanzar una semana por problemas personales o enfermedad.
 
-## 2.8.2. Criterios de evaluación (Probabilidad × Impacto)
+### 2.8.2. Criterios de evaluación (Probabilidad × Impacto)
 
 Para no valorar los riesgos a ojo, usamos dos sencillas variables:
 
@@ -495,7 +495,7 @@ Para no valorar los riesgos a ojo, usamos dos sencillas variables:
 Del cruce de ambas sale la **Severidad / Criticidad** (*Baja*, *Media*, *Alta* o *Crítica*), que marca a qué le damos prioridad.
 
 
-## 2.8.3. Matriz de Gestión de Riesgos y Plan de Mitigación
+### 2.8.3. Matriz de Gestión de Riesgos y Plan de Mitigación
 
 | ID | Descripción del Riesgo | Probabilidad | Impacto | Severidad / Criticidad | Medida de Prevención (Antes) | Plan de Contingencia (Si ocurre) |
 | :---: | :--- | :---: | :---: | :---: | :--- | :--- |
