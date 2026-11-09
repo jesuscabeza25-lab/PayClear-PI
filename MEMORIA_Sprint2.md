@@ -113,7 +113,10 @@ Fuentes:
 https://www.larazon.es/economia/parejas-pisos-compartidos-error-financiero-que-mas-conflictos-esta-generando-este-ano-3v3rfin_2026031369b3d47fd489bf782e18a535.html
 
 - Focus Market (ambito)
-[Focus Market / Fintech Naranja X. (https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)](https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874) 
+[Focus Market / Fintech Naranja X. (https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)](https://www.ambito.com/finanzas/un-estudio-revela-que-el-manejo-del-dinero-genera-conflictos-mas-del-30-las-parejas-y-familias-n6333874)
+
+- Plantilla de excel para ingresos y gastos
+  https://www.planillaexcel.com/planilla-de-excel-para-control-de-ingresos-y-egresos
 
 Resto de fuentes se basa en la encuesta realizada en el sprint1 y experiencias personales que nos ha llevado a pensar en esta aplicación como solución.
 
