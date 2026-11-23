@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="img/payclear-logo-animado.svg" alt="PayClear Logo" width="180" />
+  <img src="PI/img/payclear-logo-animado.svg" alt="PayClear Logo" width="180" />
 
   # PayClear
 
@@ -14,8 +14,23 @@
 
 </div>
 
-* Ver la memoria técnica del **Sprint 1** en: [MEMORIA_Sprint1.md](MEMORIA_Sprint1.md)
-* Ver la memoria técnica del **Sprint 2** en: [MEMORIA_Sprint2.md](MEMORIA_Sprint2.md)
+**Proyecto Intermodular (PI)**
+
+* Memoria del **Sprint 1**: [PI/MEMORIA_Sprint1.md](PI/MEMORIA_Sprint1.md)
+* Memoria del **Sprint 2**: [PI/MEMORIA_Sprint2.md](PI/MEMORIA_Sprint2.md)
+* Memoria del **Sprint 3**: [PI/MEMORIA_Sprint3.md](PI/MEMORIA_Sprint3.md)
+
+**Desarrollo de Interfaces (DI)**
+
+* Resumen de DI: [DI/README.md](DI/README.md)
+* **Sprint 1**: [DI/Sprint1.md](DI/Sprint1.md)
+* **Sprint 2**: [DI/Sprint2.md](DI/Sprint2.md)
+* **Sprint 3**: [DI/Sprint3.md](DI/Sprint3.md)
+
+**Código**
+
+* Aplicación: [PayClear/](PayClear/)
+* Componentes: [PayClearComponentes/](PayClearComponentes/)
 
 ---
 
